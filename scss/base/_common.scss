@@ -1,0 +1,251 @@
+/*==============Common CSS===================*/
+
+body {
+    font-family: $body-font;
+    color: $body-color;
+    font-size: 14px;
+    line-height: 1.42857;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 15px;
+    font-weight: 600;
+}
+p {
+    &:last-child{
+    	margin-bottom: 0;
+    }
+}
+input[type=text], input[type=email], input[type=password], input[type=tel], input[type=url], textarea {
+    border-radius: 5px;
+    height: 40px;
+    padding: 7px 10px;
+    border: 1px solid #E7ECF2;
+    transition: all .3s ease;
+}
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=url]:focus, textarea:focus{
+    border-color:#74B95C;
+}
+input[type=submit], button[type=submit]{
+    cursor: pointer;
+}
+input, textarea{
+	@include placeholder{
+		color: $body-color;
+	}
+}
+input[type=submit], button[type=submit]{
+    &:hover{
+        
+    }
+}
+textarea {
+    height: 150px;
+    padding: 10px 20px;
+    width: 100%;
+    // margin-bottom: -7px;
+    border-color: #ced4da;
+    transition: all .3s ease;
+    &:focus {
+        @extend %primary-border-color;
+    }
+    &:hover {
+        @extend %primary-border-color;
+    }
+}
+.dropdown-menu {
+    border-color: #E7ECF2;
+}
+.dropdown-item.active, .dropdown-item:hover {
+    color: #74B95C;
+    text-decoration: none;
+    background-color: #F9F9F9;
+}
+.dropdown-item {
+    transition: .3s;
+    font-size: 14px;
+    padding: 6px 15px;
+    color: #8CA2BB;
+    font-weight: 400;
+}
+/*========.section-title=========*/ 
+.section-title {
+    h2{
+        color: #314963;
+        font-size: 48px;
+    }
+    h4{
+        color: #314963; 
+        font-size: 22px;
+        font-weight: 500;
+    }
+}
+.section-title-2{
+    color: #485E76;
+    font-size: 32px;
+}
+.section-padding{
+    padding: 50px 0;
+}
+/*======.owl-dots customization=======*/
+.owl-dots {
+    @extend %textcenter;
+    div {
+        height: 5px;
+        width: 5px;
+        background-color: #BBBBBB;
+        display: inline-block;
+        margin: 0 5px;
+        border-radius: 50%;
+        &.active {
+            @extend %primary-bg-color;
+        }
+    }
+}
+    
+/*=====owl nav customization======*/
+// .owl-nav div {
+//     @extend %displayinline;
+//     @extend %posabsolute;
+//     left: -10px;
+//     top: 50%;
+//     color: #2A7D2E;
+//     background-color: #fff;
+//     line-height: 60px;
+//     margin-top: -30px;
+//     width: 60px;
+//     height: 60px;
+//     font-size: 45px;
+//     padding-right: 5px;
+//     @extend %borderradius50;
+//     @extend %textcenter;
+//     @extend %basetransition1;
+//     &.owl-next {
+//         left: auto;
+//         right: -10px;
+//         padding-left: 5px;
+//         padding-right: 0;
+//     }
+//     &:hover {
+//         color: #ffffff;
+//         background-color: #2A7D2E;
+//     }
+// }
+
+// select {
+//     font-size: 19px;
+//     color: #0da0f4;
+//     background-color: #fff;
+//     padding: 8px 10px;
+// }
+
+/*========.nice-select=============*/ 
+.nice-select {
+    width: 100%;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    border-color:  #ced4da;
+    .list {
+        width: 100%;
+        box-shadow: none;
+        border: 1px solid #ced4da;
+    }
+    &:focus {
+        @extend %primary-border-color;
+    }
+    &:hover {
+        @extend %primary-border-color;
+    }
+    &:after{
+        right: 25px;
+        border-color: #ced4da;
+        width: 10px;
+        height: 10px;
+        margin-top: -6px;
+    }
+    &:hover:after {
+        @extend %primary-border-color;
+    }
+}
+// .ps__scrollbar-y {
+//     background-color: #99822c !important;
+// }
+
+
+/*========== default checkbox style =============*/
+input[type=checkbox]{
+    display:none;
+}
+input[type=checkbox] + label:before {
+    border: 1px solid rgb(255, 255, 255);
+    content: "";
+    display: inline-block;
+    font-size: 30px;
+    height: 20px;
+    line-height: 11px;
+    margin: -4px 5px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+input[type=checkbox]:checked + label:before {
+    content: "\f00c";
+    font-family: fontawesome;
+    color: #1d1d1b;
+    font-size: 15px;
+    padding-top: 4px;
+}
+label {
+    margin-right: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+/*========== default radio button style =============*/
+input[type=radio]{
+    display:none;
+}
+input[type=radio] + label:before {
+    border: 1px solid rgb(255, 255, 255);
+    content: "";
+    display: inline-block;
+    font-size: 30px;
+    height: 20px;
+    line-height: 11px;
+    margin: -4px 5px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+input[type=radio]:checked + label:before {
+    content: "\f00c";
+    font-family: fontawesome;
+    color: #0F4A6E;
+    font-size: 15px;
+    padding-top: 4px;
+}
+label{
+    @extend %body-color;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

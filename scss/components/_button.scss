@@ -8,11 +8,12 @@
     border-radius: 5px;
     height: 45px;
     line-height: 41px;
+    font-family: "Myriad Pro", sans-serif;
     @extend %basetransition2;
     @extend %primary-bg-color;
-    @extend %body-font;
     @extend %posrelative;
     @extend %white-color;
+    @extend %textcenter;
     &:hover {
         @extend %primary-color;
         @extend %primary-border-color;

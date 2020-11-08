@@ -11,7 +11,11 @@ jQuery(document).ready(function($){
 
     // $(".header-area").sticky({ topSpacing: 0 });
 
-    // $('select').niceSelect();
+    $('select').niceSelect();
+
+    AOS.init({
+        duration: 1000, // values from 0 to 3000, with step 50ms
+    });
 
     // homepage-slides
 	// $(".homepage-slides").owlCarousel({
@@ -119,7 +123,45 @@ jQuery(document).ready(function($){
     //     gallery: {
     //         enabled: true
     //     }
-	// });
+    // });
+    
+
+    $('.slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        centerMode: true,
+        variableWidth: true,
+        infinite: true,
+        focusOnSelect: true,
+        cssEase: 'linear',
+        touchMove: true,
+        prevArrow:'<button class="slick-prev"> < </button>',
+        nextArrow:'<button class="slick-next"> > </button>',
+        
+        //         responsive: [                        
+        //             {
+        //               breakpoint: 576,
+        //               settings: {
+        //                 centerMode: false,
+        //                 variableWidth: false,
+        //               }
+        //             },
+        //         ]
+      });
+      
+      var imgs = $('.slider img');
+      imgs.each(function(){
+        var item = $(this).closest('.item');
+        item.css({
+        //   'background-image': 'url(' + $(this).attr('src') + ')', 
+        //   'background-position': 'center',            
+        //   '-webkit-background-size': 'cover',
+        //   'background-size': 'cover', 
+        });
+        // $(this).hide();
+      });
 
     // Scroll To Top starts
     $(window).scroll(function(){

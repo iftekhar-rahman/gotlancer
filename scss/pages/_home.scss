@@ -7,15 +7,18 @@
     .hero-content{
         font-size: 16px;
         margin-top: 110px;
+        position: relative;
+        z-index: 2;
         h2{
             color: #74B95C;
             font-size: 48px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             
         }
         .boxed-btn{
             margin-top: 30px;
             background-color: #fff;
+            font-family: "Poppins", sans-serif;
             @extend %primary-color;
             &:hover{
                 @extend %primary-bg-color;
@@ -26,23 +29,65 @@
     .stars {
         margin: 0 8px;
     }
+    .animated-shape {
+        position: absolute;
+        left: 0;
+        top: 200px;
+        z-index: 1;
+    }
+    .animated-shape.shape-2 {
+        left: auto;
+        right: 0;
+        transition: all 3s ease;
+    }
+    .animated-shape.shape-3 {
+        left: -122px;
+        top: 65px;
+        transition: all 2s ease;
+    }
+    [data-aos=fade-left] {
+        transform: translate3d(400px, 0, 0);
+    }
+    [data-aos=fade-up] {
+        transform: translate3d(0, 200px, 0);
+        
+    }
+
+    // [data-aos][data-aos][data-aos-duration="1000"], body[data-aos-duration="1000"] [data-aos] {
+    //     -webkit-transition-duration: 2s;
+    //     -o-transition-duration: 2s;
+    //     transition-duration: 2s;
+    // }
 }
 
 .single-slide-item {
     background: #fff;
     color: #314963;
     border-radius: 10px;
-    width: 255px;
-    padding: 10px 0;
+    padding: 10px 10px;
     margin: 0 auto;
-    margin-top: 120px;
+    margin-top: 30px;
+    width: 260px;
+    min-height: 300px;
     img {
         max-width: 92px;
         border-radius: 50%;
+        margin: 0 auto;
         margin-bottom: 20px;
     }
     h4 {
         font-size: 16px;
+        font-size: 16px;
+        display: inline-block;
+        position: relative;
+        span {
+            position: absolute;
+            right: -34px;
+            top: -4px;
+        }
+        &.name {
+            margin-right: 27px;
+        }
     }
     h5 {
         font-size: 11px;
@@ -52,6 +97,7 @@
         color: #485E76;
         display: inline-block;
         margin-left: 20px;
+        margin-bottom: 10px;
         i {
             position: absolute;
             left: -22px;
@@ -105,10 +151,12 @@
 
 // .services-category-area
 .services-category-area {
+    padding: 40px 0 20px;
     .section-title {
-        margin-bottom: 50px;
+        margin-bottom: 80px;
         h2 {
             color: #74B95C;
+            margin-bottom: 10px;
         }
     }
     .srow {
@@ -122,7 +170,7 @@
     .single-service-category {
         border: 1px solid #D1E0E5;
         border-radius: 5px;
-        padding: 20px 15px;
+        padding: 25px 20px 10px;
         display: block;
         color: #8CA2BB;
         transition: .5s;
@@ -130,7 +178,7 @@
         min-height: 305px;
         img {
             max-width: 132px;
-            margin-bottom: 25px;
+            margin-bottom: 22px;
         }
         h4 {
             color: #314963;
@@ -148,12 +196,21 @@
         }
     }
     .boxed-btn{
-        margin-top: 10px;
+        margin-top: 5px;
+        font-family: "Poppins", sans-serif;
+        background-color: #F2F7FA;
+        color: #8CA2BB;
+        &:hover{
+            @extend %primary-bg-color;
+            @extend %primary-border-color;
+            @extend %white-color;
+        }
     }
 }
 
-
+// .find-area 
 .find-area {
+    padding: 120px 0 25px;
     background-color: #F2F5FA;
     .find-content {
         color: #314963;
@@ -161,16 +218,20 @@
         font-weight: 500;
         line-height: 1.6;
         padding-right: 70px;
+        margin-top: 70px;
         .section-title h2 {
             margin-bottom: 35px;
         }
         .boxed-btn {
             margin-top: 40px;
+            font-size: 24px;
+            font-weight: 400;
         }
     }
 }
 
 .services-details-area{
+    padding: 25px 0 60px;
     .section-title {
         margin-bottom: 20px;
     }
@@ -208,7 +269,7 @@
 
 // .services-section
 .services-section {
-    margin: 80px 0 40px;
+    margin: 75px 0 40px;
     .single-service-item {
         border: 1px solid #E6E6E6;
         border-radius: 5px;
@@ -235,4 +296,86 @@
     }
 }
 
+.contact-section {
+    color: #1B2944;
+    font-size: 21px;
+    font-family: "Myriad Pro", sans-serif;
+    h2 {
+        color: #1B2944;
+        font-size: 36px;
+        font-weight: 700;
+        font-family: "Myriad Pro", sans-serif;
+    }
+    .boxed-btn {
+        width: 210px;
+        margin-top: 10px;
+    }
+}
 
+//.hero-slider
+.hero-slider{
+    .slider {
+        position: relative;
+        z-index: 200;
+        padding: 0;
+        max-width: 100%;
+        width: 520px;
+        height: 371px;
+        overflow: hidden;
+        padding-left: 3px;
+        float: right;
+        margin-top: 70px;
+    }
+    .item.slick-slide {
+        width: 355px;
+        height: 330px !important;
+        transition: transform .4s;
+        position: relative; 
+    }
+    .item.slick-slide {
+        transform: scale(0.7)  translate(640px);
+    }
+    .item.slick-slide.slick-center + .slick-slide {
+        transform: scale(0.8) translate(-250px);
+        z-index: 10;
+    }
+    .item.slick-slide.slick-center + .slick-slide + .item.slick-slide {
+        transform: scale(0.7)  translate(-640px);
+        z-index: 5;
+    }
+    .item.slick-slide.slick-active {
+        transform: scale(0.8) translate(250px);
+    }
+    .item.slick-slide.slick-center {
+        transform: scale(1);
+        z-index: 30;
+    }
+    .slick-center:after {
+        opacity: 0;
+    } 
+}
+
+// .slick-dots
+.slick-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    text-align: center;
+    li {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        background: #fff;
+        margin: 0 3px;
+        cursor: pointer;
+        border-radius: 50px;
+        button {
+            display: none;
+        }
+        &.slick-active {
+            width: 33px;
+            background: #74B95C;
+        }
+    }
+}

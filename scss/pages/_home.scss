@@ -10,6 +10,9 @@
     @include all-below-mobile-lg{
         height: 440px;
     }
+    @include all-mx-mobile{
+        height: 620px;
+    }
     .hero-content{
         font-size: 16px;
         margin-top: 110px;
@@ -22,7 +25,10 @@
             margin-top: 55px;
         }
         @include all-mx-mobile{
-            margin-top: 75px;
+            margin-top: 25px;
+            p{
+                margin-bottom: 0;
+            }
         }
         h2{
             @extend %primary-color;
@@ -44,6 +50,7 @@
             }
             @include all-mx-mobile{
                 font-size: 32px;
+                margin-bottom: 10px;
             }
         }
         .boxed-btn{
@@ -60,6 +67,9 @@
             }
             @include mx-mobile-lg{
                 margin-top: 18px;
+            }
+            @include all-mx-mobile{
+                margin-top: 10px;
             }
         }
     }
@@ -129,8 +139,11 @@
         @include all-below-med{
             width: 230px;
         }
-        @include mx-mobile-lg{
+        @include all-below-mobile-lg{
             width: 240px;
+        }
+        @include all-mx-mobile{
+            border: 1px solid #E6E6E6;
         }
         img {
             max-width: 92px;
@@ -474,7 +487,8 @@
 //.hero-slider
 .hero-slider{
     @include all-mx-mobile{
-        display: none;
+        display: flex;
+        justify-content: center;
     }
     .slider {
         position: relative;
@@ -494,9 +508,14 @@
             width: 330px;
             margin-top: 75px;
         }
-        @include mx-mobile-lg{
+        @include all-below-mobile-lg{
             width: 240px;
             margin-top: 55px;
+        }
+        @include all-mx-mobile{
+            margin-top: 20px;
+            width: 345px;
+            height: 325px;
         }
     }
     .item.slick-slide {

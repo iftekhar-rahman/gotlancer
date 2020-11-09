@@ -7,6 +7,7 @@
     z-index: 999999;
     background: #fff;
     height: 70px;
+    box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     .logo{
         height: 70px;
     }
@@ -138,30 +139,11 @@
                 }
             }
         }
-
-
-        // input[type=text] {
-        //     padding: 7px 10px 7px 30px;
-        //     width: 180px;
-        // }
-        // .dropdown-menu.show {
-        //     transform: translate3d(0px, 0px, 0px) !important;
-        // }
-        // .dropdown-menu {
-        //     width: 180px;
-        // }
         .angle-icon {
             position: absolute;
             right: 10px;
             top: 8px;
             color: #CED8E1;
-            /* width: 25px; */
-            /* height: 38px; */
-            /* background: #fff; */
-            /* text-align: center; */
-            /* line-height: 36px; */
-            /* cursor: pointer; */
-            /* border-radius: 5px; */
             font-size: 20px;
         }
     }
@@ -332,7 +314,7 @@
             left: 0;
             animation:slide-down 0.7s;
             z-index: 99999;
-            box-shadow: 0 -40px 20px 30px #000;
+            box-shadow: 0 1px 6px rgba(57,73,76,0.35);
             &:after {
                 position: absolute;
                 content: "";

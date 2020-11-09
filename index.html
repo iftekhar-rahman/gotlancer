@@ -8,13 +8,9 @@
         <title>GotLancer</title>
         
         <!--Libraries-->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="./fonts/typo-fonts/fonts.css" rel="stylesheet">
 
         <!--Plugins-->
-        <link href="css/owl.carousel.min.css" rel="stylesheet">
-        <link href="css/nice-select.css" rel="stylesheet">
 
         <!--Theme specific styles-->
         <link href="css/style.css" rel="stylesheet">
@@ -25,16 +21,44 @@
     </head>
     <body>
 
+        <div class="overlay"></div>
+
+        <!-- visible only below 991px viewports | small-devices-header starts -->
+        <div class="small-devices-header d-block d-lg-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="logo d-flex align-items-center">
+                            <a href="#"><img src="img/logo.png" alt="Gotlancer"></a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mobile-menu-trigger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- small-devices-header ends -->
+
         <!-- header-area starts -->
         <div class="header">
             <div class="header-area">
+                <div class="mobile-menu-close-trigger d-block d-lg-none">
+                    <span class="bar-1"></span>
+                    <span class="bar-2"></span>
+                </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-10 d-flex">
-                            <div class="site-logo d-flex align-items-center">
+                        <div class="col-lg-10 d-flex flex-wrap flex-lg-nowrap">
+                            <div class="site-logo d-flex align-items-center order-0">
                                 <a href="#"><img src="img/logo.png" alt="Gotlancer"></a>
                             </div>
-                            <div class="mainmenu">
+                            <div class="mainmenu order-2 order-lg-1">
                                 <ul>
                                     <li><a href="#">Projects</a></li>
                                     <li><a href="#">Hire</a></li>
@@ -42,14 +66,23 @@
                                     <li><a href="#">Help</a></li>
                                 </ul>
                             </div>
-                            <div class="header-search-box position-relative">
-                                <input type="text" placeholder="Search" name="search">
-                                <button type="submit" value="submit"><i class="fa fa-search"></i></button>
-                                <div class="dropdown">
-                                    <span id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="angle-icon"><i class="fa fa-angle-down"></i></span>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                      <a class="dropdown-item" href="#">Action</a>
-                                      <a class="dropdown-item" href="#">Another action</a>
+                            <div class="header-search-box position-relative order-1 order-lg-2">
+                                <button id="search-box-trigger" class="search-box-trigger" type="button"><i class="fa fa-search"></i> Search <i class="fa fa-angle-down angle-icon"></i></button>
+                                <div id="search-box-wrapper" class="search-dropdown">
+                                    <div class="dropdown-header">
+                                        Buyers can
+                                    </div>
+                                    <div class="search-dropdown-item offers">
+                                        <a href="https://www.google.com/">Search <span class="standout">offers</span> <span class="helper">to buy now</span></a>
+                                    </div>
+                                    <div class="search-dropdown-item freelancers">
+                                        <a href="https://www.google.com/">Search <span class="standout">freelancers</span> <span class="helper">to request a proposal</span></a>
+                                    </div>
+                                    <div class="dropdown-header">
+                                        Freelancers can
+                                    </div>
+                                    <div class="search-dropdown-item projects">
+                                        <a href="https://www.google.com/">Search <span class="standout">projects</span> <span class="helper">to quote on</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +100,7 @@
         <!-- header-area ends -->
 
         <!-- hero-area starts -->
-        <div class="hero-area position-relative">
+        <div class="hero-area position-relative overflow-hidden">
             <div class="animated-shape shape-1" data-aos="fade-up">
                 <img src="img/square-shape.png" alt="">
             </div>
@@ -76,7 +109,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-sm-6">
                         <div class="animated-shape shape-3" data-aos="fade-left">
                             <img src="img/round-shape.png" alt="">
                         </div>
@@ -86,7 +119,7 @@
                             <a href="#" class="boxed-btn">Post a project now</a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-sm-6">
                         <div class="hero-slider">
                             <div class="slider">
                                 <div class="item">
@@ -214,26 +247,26 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
-                        <div class="brands d-flex justify-content-between align-items-center">
-                            <div class="single-brand-item">
+                        <div class="brands d-flex flex-wrap flex-lg-nowrap justify-content-center justify-content-md-between align-items-center">
+                            <div class="single-brand-item title">
                                 <h4>2000+ business<br> Trust us</h4>
                             </div>
-                            <div class="single-brand-item">
+                            <div class="single-brand-item brand-1">
                                 <img src="img/brand-log-1.png" alt="">
                             </div>
-                            <div class="single-brand-item">
+                            <div class="single-brand-item brand-2">
                                 <img src="img/brand-log-2.png" alt="">
                             </div>
-                            <div class="single-brand-item amazon">
+                            <div class="single-brand-item brand-3">
                                 <img src="img/brand-log-3.png" alt="">
                             </div>
-                            <div class="single-brand-item">
+                            <div class="single-brand-item brand-4">
                                 <img src="img/brand-log-4.png" alt="">
                             </div>
-                            <div class="single-brand-item">
+                            <div class="single-brand-item brand-5">
                                 <img src="img/brand-log-5.png" alt="">
                             </div>
-                            <div class="single-brand-item">
+                            <div class="single-brand-item brand-6">
                                 <img src="img/brand-log-6.png" alt="">
                             </div>
                         </div>
@@ -322,10 +355,10 @@
         <!-- services-category-area ends -->
 
         <!-- find-area starts -->
-        <div class="find-area">
+        <div class="find-area overflow-hidden">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6" data-aos="fade-right">
+                    <div class="col-lg-6 order-1 order-lg-0" data-aos="fade-right">
                         <div class="find-content">
                             <div class="section-title">
                                 <h2>Looking for talent?</h2>
@@ -351,7 +384,7 @@
                             <div class="section-title text-center">
                                 <h2>Connect with in-demand professionals</h2>
                             </div>
-                            <div class="service-type-section d-flex justify-content-between">
+                            <div class="service-type-section d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-md-between">
                                 <div class="single-service-type position-relative">
                                     <img src="img/check.png" alt=""> Complex projects
                                 </div>
@@ -370,7 +403,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <ul>
                                         <li><a href="#">Android Developer</a></li>
                                         <li><a href="#">Bookkeeper</a></li>
@@ -382,7 +415,7 @@
                                         <li><a href="#">Facebook Developer</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <ul>
                                         <li><a href="#">Front-End Developer</a></li>
                                         <li><a href="#">Game Developer</a></li>
@@ -394,7 +427,7 @@
                                         <li><a href="#">Logo Designer</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <ul>
                                         <li><a href="#">Mobile App Developer</a></li>
                                         <li><a href="#">PHP Developer</a></li>
@@ -406,7 +439,7 @@
                                         <li><a href="#">Software Developer</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <ul>
                                         <li><a href="#">Software Engineer</a></li>
                                         <li><a href="#">Technical Writer</a></li>
@@ -427,7 +460,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <ul>
                                         <li><a href="#">Apple UIKit</a></li>
                                         <li><a href="#">Apple Xcode</a></li>
@@ -439,7 +472,7 @@
                                         <li><a href="#">Enterprise Architecture</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <ul>
                                         <li><a href="#">GitLab</a></li>
                                         <li><a href="#">Go development</a></li>
@@ -451,7 +484,7 @@
                                         <li><a href="#">Risk Management</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <ul>
                                         <li><a href="#">Scala development</a></li>
                                         <li><a href="#">SCORM</a></li>
@@ -463,7 +496,7 @@
                                         <li><a href="#">Vue.js</a></li>
                                     </ul>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <ul>
                                         <li><a href="#">Social customer service</a></li>
                                         <li><a href="#">HR consulting</a></li>
@@ -479,28 +512,28 @@
                         </div><!-- trending-skills-section ends -->
                         <div class="services-section" data-aos="fade-up">
                             <div class="row">
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <a href="#" class="single-service-item text-center">
                                         <span class="icon"><img src="img/service-icon-1.png" alt=""></span>
                                         <h4>4.8/5 rating</h4>
                                         <p>That’s our average customer rating from 37,317 reviews. Happy designers = happy customers.</p>
                                     </a>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <a href="#" class="single-service-item text-center">
                                         <span class="icon"><img src="img/service-icon-2.png" alt=""></span>
                                         <h4>24/7 creativity</h4>
                                         <p>Professional graphic designers available worldwide from Frankfurt to Frankston.</p>
                                     </a>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <a href="#" class="single-service-item text-center">
                                         <span class="icon"><img src="img/service-icon-1.png" alt=""></span>
                                         <h4>100% love it</h4>
                                         <p>Work with award winning designers and get a design you'll love.</p>
                                     </a>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-md-6 col-lg-3">
                                     <a href="#" class="single-service-item text-center">
                                         <span class="icon"><img src="img/service-icon-1.png" alt=""></span>
                                         <h4>90+ categories</h4>
@@ -525,7 +558,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3">
-                        <div class="single-footer-widget">
+                        <div class="single-footer-widget widget-1">
                             <div class="footer-logo">
                                 <img src="img/white-logo.png" alt="gotlancer">
                             </div>
@@ -543,7 +576,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-md-4 col-lg-3">
                         <div class="single-footer-widget">
                             <h4>Network</h4>
                             <ul>
@@ -558,7 +591,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-md-4 col-lg-3">
                         <div class="single-footer-widget">
                             <h4>Company</h4>
                             <ul>
@@ -576,7 +609,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-md-4 col-lg-3">
                         <div class="single-footer-widget">
                             <h4>Freelancers</h4>
                             <ul>
@@ -597,10 +630,10 @@
         <div class="footer-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 d-flex align-items-center">
+                    <div class="col-lg-6 d-flex align-items-center justify-content-start justify-content-center order-1 order-lg-0 copyright-text">
                         <p>&copy; 2018 - 2020 Gotlancer® Gotlancer Pvt Ltd.</p>
                     </div>
-                    <div class="col-lg-6 d-flex justify-content-end align-items-center">
+                    <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center">
                         <span>Follow us:</span>
                         <div class="footer-social-icons">
                             <a href="#"><i class="fa fa-facebook"></i></a>

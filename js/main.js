@@ -1,5 +1,25 @@
 jQuery(document).ready(function($){
 
+
+    // JS for search box
+    $(function() {
+        $("#search-box-trigger").on("click", function(e) {
+            $("#search-box-wrapper").toggleClass("active");
+        });
+        $(document).on("click", function(e) {
+            if ($(e.target).is("#search-box-wrapper, #search-box-trigger") === false) {
+                $("#search-box-wrapper").removeClass("active");
+            }
+        });
+    });
+
+    $(".mobile-menu-trigger").on("click", function(){
+        $(".header-area, .overlay").addClass("active");
+    });
+    $(".mobile-menu-close-trigger, .overlay").on("click", function(){
+        $(".header-area, .overlay").removeClass("active");
+    });
+
     // Sticky Header with smooth animation
     $(window).on('scroll', function() {
         if ($(window).scrollTop() >= 300) {
@@ -155,12 +175,7 @@ jQuery(document).ready(function($){
       imgs.each(function(){
         var item = $(this).closest('.item');
         item.css({
-        //   'background-image': 'url(' + $(this).attr('src') + ')', 
-        //   'background-position': 'center',            
-        //   '-webkit-background-size': 'cover',
-        //   'background-size': 'cover', 
         });
-        // $(this).hide();
       });
 
     // Scroll To Top starts

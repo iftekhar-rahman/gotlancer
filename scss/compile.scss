@@ -4,7 +4,7 @@
 
 // External 
 @import "external/_bootstrap.min.scss";
-@import "external/_font-awesome.min.scss";
+@import "external/_all.min.scss";
 // @import "external/_owl.carousel.min.scss";
 @import "external/_nice-select.scss";
 // @import "external/_perfect-scrollbar.min.scss";
@@ -36,6 +36,7 @@
 
 // Pages Styles
 @import 'pages/home';
+@import 'pages/afterlogin';
 
 
 

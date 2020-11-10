@@ -1,0 +1,97 @@
+/*---------after-login-css------------*/ 
+.after-login-header{
+    .header-area{
+        box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+    }
+    .message-box {
+        a {
+            color: #314963;
+            font-weight: 600;
+            font-size: 14px;
+            padding-right: 26px;
+            &:hover{
+                @extend %primary-color;
+            }
+            .mnumber {
+                background-image: url(../img/chat-icon.svg);
+                color: #fff;
+                position: absolute;
+                right: 0;
+                top: 1px;
+                width: 21px;
+                height: 21px;
+                font-weight: 400;
+                text-align: center;
+                line-height: 17px;
+                font-size: 12px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+    .notification-box{
+        a {
+            color: #ADBDCD;
+            font-size: 21px;
+            margin-left: 25px;
+            .nnumber {
+                position: absolute;
+                right: -7px;
+                top: 2px;
+                width: 17px;
+                height: 15px;
+                background: #71B659;
+                color: #fff;
+                text-align: center;
+                line-height: 15px;
+                font-size: 12px;
+                font-weight: 400;
+                border-radius: 3px;
+            }
+        }
+    }
+    .user-detail {
+        margin-left: 28px;
+        .dropdown-menu {
+            left: -155px !important;
+            width: 200px;
+            border-radius: 4px;
+            padding: 13px 0 0;
+            top: 3px !important;
+            box-shadow: 0px 0px 6px -2px rgba(49, 73, 99, 0.59);
+            .user-links {
+                a {
+                    display: block;
+                    padding: 6px 15px 6px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: #314963;
+                    &:hover {
+                        background-color: #F2F5FA;
+                        color: #74B95C;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+.available-status {
+    border-top: 1px solid #E3EAF4;
+    padding: 19px 10px;
+    margin-top: 8px;
+    button {
+        border: 0;
+        background-color: #ADBDCD;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 4px;
+        width: 86px;
+        height: 31px;
+        padding: 0 25px 0 0;
+        position: relative;
+        line-height: 32px;
+    }
+}

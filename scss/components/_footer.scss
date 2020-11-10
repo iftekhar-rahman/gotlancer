@@ -107,7 +107,7 @@
         background-color: #192A3E;
         border-radius: 50px;
         text-align: center;
-        line-height: 40px;
+        line-height: 42px;
         color: #B9CAD9;
         @extend %basetransition1;
         margin-left: 10px;
@@ -160,7 +160,7 @@
     @extend %basetransition2;
     @extend %invisible;
     font-size: 25px;
-    line-height: 37px;
+    line-height: 42px;
     @extend %borderradius5;
     &.scrollBtn{
         @extend %visible;

@@ -184,9 +184,38 @@ jQuery(document).ready(function($){
     }); // click() scroll top ENDS
 
 
+    //  Profile trigger start
+	$('#dropdownMenuButton').on('click', function () {
+		$('.dropdown-menu').toggleClass('show');
+	});
+
+	$('.available-status .online').on('click', function () {
+		$(this).css({ backgroundColor: '#74B95C' });
+		$('.available-status .away').css({ backgroundColor: '#ADBDCD' });
+	});
+	$('.available-status .away').on('click', function () {
+		$(this).css({ backgroundColor: '#74B95C' });
+		$('.available-status .online').css({ backgroundColor: '#ADBDCD' });
+	});
+
+	$(document).on('click', function (e) {
+		var container = $('.dropdown-menu');
+		if (!container.is(e.target) && e.target.className !== 'profile-image' && container.has(e.target).length === 0) {
+			container.removeClass('show');
+		}
+	});
+	//  Profile trigger end
+
+
 
     
-
+    $('.mainmenu').meanmenu({
+        meanMenuContainer: '.header-area .container',
+        meanScreenWidth: 991,
+        meanRevealPosition: "left",
+        meanExpand: "+",
+        meanContract: "-",
+    });
     
 
 });

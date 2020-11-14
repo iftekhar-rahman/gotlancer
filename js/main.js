@@ -29,7 +29,6 @@ jQuery(document).ready(function($){
         }
     })
 
-    // $(".header-area").sticky({ topSpacing: 0 });
 
     $('select').niceSelect();
 
@@ -37,115 +36,8 @@ jQuery(document).ready(function($){
         duration: 1000, // values from 0 to 3000, with step 50ms
     });
 
-    // homepage-slides
-	// $(".homepage-slides").owlCarousel({
-	// 	items: 1,
-	// 	loop: true,
-	// 	nav: true,
-	// 	dots: false,
-    //     autoplay: false,
-    //     navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-	// });
-
-        // perfectScrollbar
-        // $(".nice-select .list").perfectScrollbar();
-
-    // $("#range_49").ionRangeSlider({
-    //     type: "single",
-    //     min: 150,
-    //     max: 250,
-    //     from: 200,
-    //     to: 250,
-    //     prefix: "£",
-    //     step: 1,
-    //     onFinish: function(data) {
-    //         maxValue = data.from;
-    //         alert("Your Value: " + maxValue);
-    //     }
-    // });
-
-
-    // $(".hero-slider").owlCarousel({
-    //     items: 3,
-    //     center: true,
-    //     loop: true,
-    //     nav: false,
-    //     dots: false,
-    //     autoplay: false,
-    //     margin: 0,
-    //     navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-    //     // responsive: {
-    //     //     0: {
-    //     //         items: 2,
-    //     //         margin: 15,
-    //     //         nav: false
-    //     //     },
-    //     //     580: {
-    //     //         items: 3,
-    //     //         margin: 3,
-    //     //         nav: false
-    //     //     },
-    //     //     720: {
-    //     //         items: 4,
-    //     //         margin: 3,
-    //     //         nav: false
-    //     //     },
-    //     //     960: {
-    //     //         items: 5
-    //     //     },
-    //     //     1140: {
-    //     //         items: 6
-    //     //     }
-
-    //     // }
-    // });
-
-    // $(".feature-carousel-wrap").owlCarousel({
-    //     items: 4,
-    //     loop: true,
-    //     nav: true,
-    //     dots: true,
-    //     autoplay: false,
-    //     margin: 15,
-    //     navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-    //     responsive: {
-    //         0: {
-    //             items: 1,
-    //             margin: 0,
-    //             nav: false
-    //         },
-    //         481: {
-    //             items: 2,
-    //             margin: 15,
-    //             nav: false
-    //         },
-    //         720: {
-    //             items: 3,
-    //             margin: 15,
-    //             nav: false
-    //         },
-    //         960: {
-    //             items: 3,
-    //             margin: 25,
-    //         },
-    //         1140: {
-    //             items: 4
-    //         }
-
-    //     }
-    // });
-
-
-
-
-	// $(".bodytype-carousel-wrap").magnificPopup({
-	// 	type: 'image',
-    //     gallery: {
-    //         enabled: true
-    //     }
-    // });
     
-
+    // Hero slider
     $('.slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -159,14 +51,13 @@ jQuery(document).ready(function($){
         touchMove: true,
         prevArrow:'<button class="slick-prev"> < </button>',
         nextArrow:'<button class="slick-next"> > </button>',
-      });
-      
-      var imgs = $('.slider img');
-      imgs.each(function(){
+    });
+    var imgs = $('.slider img');
+        imgs.each(function(){
         var item = $(this).closest('.item');
         item.css({
         });
-      });
+    });
 
     // Scroll To Top starts
     $(window).scroll(function(){
@@ -184,20 +75,14 @@ jQuery(document).ready(function($){
     }); // click() scroll top ENDS
 
 
-    //  Profile trigger start
+    // Profile trigger start
 	$('#dropdownMenuButton').on('click', function () {
 		$('.dropdown-menu').toggleClass('show');
 	});
-
-	$('.available-status .online').on('click', function () {
-		$(this).css({ backgroundColor: '#74B95C' });
-		$('.available-status .away').css({ backgroundColor: '#ADBDCD' });
+	$('.available-status button').on('click', function () {
+        $(".available-status button").removeClass('active');
+		$(this).addClass('active');
 	});
-	$('.available-status .away').on('click', function () {
-		$(this).css({ backgroundColor: '#74B95C' });
-		$('.available-status .online').css({ backgroundColor: '#ADBDCD' });
-	});
-
 	$(document).on('click', function (e) {
 		var container = $('.dropdown-menu');
 		if (!container.is(e.target) && e.target.className !== 'profile-image' && container.has(e.target).length === 0) {
@@ -207,15 +92,53 @@ jQuery(document).ready(function($){
 	//  Profile trigger end
 
 
+    if ($(window).width() < 991) {
+        /*-----------------------
+        --> Off Canvas Menu
+        -------------------------*/
+        /*Variables*/
+        var $offCanvasNav = $('.off-canvas-nav'),
+            $offCanvasNavSubMenu = $offCanvasNav.find('.sub-menu');
+
+        /*Add Toggle Button With Off Canvas Sub Menu*/
+        $offCanvasNavSubMenu.parent().prepend('<span class="menu-expand"><i class="fas fa-chevron-down"></i></span>');
+
+        /*Close Off Canvas Sub Menu*/
+        $offCanvasNavSubMenu.slideUp('0');
+
+        /*Category Sub Menu Toggle*/
+        $offCanvasNav.on('click', 'li a, li .menu-expand', function(e) {
+            var $this = $(this);
+            if (($this.parent().attr('class').match(/\b(menu-item-has-children|has-children|has-sub-menu)\b/)) && ($this.attr('href') === '#' || $this.hasClass('menu-expand'))) {
+                e.preventDefault();
+                if ($this.siblings('ul:visible').length) {
+                    $this.parent('li').removeClass('active');
+                    $this.siblings('ul').slideUp('0');
+                } else {
+                    $this.parent('li').addClass('active');
+                    $this.closest('li').siblings('li').find('ul:visible').slideUp('0');
+                    $this.siblings('ul').slideDown('0');
+                }
+            }
+        });
+
+        // Off Canvas Open close
+        // $(".off-canvas-btn").on('click', function() {
+        //     $(".off-canvas-wrapper").addClass('open');
+        // });
+
+        // $(".btn-close-off-canvas").on('click', function() {
+        //     $(".off-canvas-wrapper").removeClass('open');
+        // });
+    }
+    else {
+    // alert('More than 960');
+    }
+
+        
 
     
-    $('.mainmenu').meanmenu({
-        meanMenuContainer: '.header-area .container',
-        meanScreenWidth: 991,
-        meanRevealPosition: "left",
-        meanExpand: "+",
-        meanContract: "-",
-    });
+   
     
 
 });

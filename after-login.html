@@ -9,12 +9,12 @@
         
         <!--Libraries-->
         <link href="./webfonts/typo-fonts/fonts.css" rel="stylesheet">
-        <link href="css/meanmenu.min.css" rel="stylesheet">
 
         <!--Plugins-->
 
         <!--Theme specific styles-->
         <link href="css/style.css" rel="stylesheet">
+        
         
         <!--Core jQuery-->
         <script src="js/jquery-3.3.1.slim.min.js"></script>
@@ -25,7 +25,7 @@
         <div class="overlay"></div>
 
         <!-- visible only below 991px viewports | small-devices-header starts -->
-        <!-- <div class="small-devices-header d-block d-lg-none">
+        <div class="small-devices-header d-block d-lg-none">
             <div class="container">
                 <div class="row">
                     <div class="col-6">
@@ -33,7 +33,13 @@
                             <a href="#"><img src="img/logo.png" alt="Gotlancer"></a>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 d-flex align-items-center justify-content-end">
+                        <div class="message-box d-block d-lg-none position-relative">
+                            <a href="#">Inbox <span class="mnumber">5</span></a>
+                        </div>
+                        <div class="notification-box d-block d-lg-none position-relative">
+                            <a href="#"><i class="fas fa-bell"></i> <span class="nnumber">1</span></a>
+                        </div>
                         <div class="mobile-menu-trigger">
                             <span></span>
                             <span></span>
@@ -43,18 +49,11 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- small-devices-header ends -->
 
         <!-- header-area starts -->
         <div class="header header-style-2">
-            <!-- <div class="header-right-section">
-                <div class="container">
-                    <div class="row justify-content-end">
-                        
-                    </div>
-                </div>
-            </div> -->
             <div class="header-area">
                 <div class="mobile-menu-close-trigger d-block d-lg-none">
                     <span class="bar-1"></span>
@@ -62,14 +61,14 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-9 d-flex flex-wrap flex-lg-nowrap">
+                        <div class="col-lg-9 d-flex flex-wrap flex-lg-nowrap order-1 order-lg-0">
                             <div class="site-logo d-flex align-items-center order-0">
                                 <a href="#"><img src="img/logo.png" alt="Gotlancer"></a>
                             </div>
-                            <div class="mainmenu order-2 order-lg-1">
+                            <div class="mainmenu off-canvas-nav order-2 order-lg-1">
                                 <ul>
-                                    <li><a href="#">Projects</a>
-                                        <ul>
+                                    <li class="menu-item-has-children"><a href="#">Projects</a>
+                                        <ul class="sub-menu">
                                             <li><a href="#">Find Work</a></li>
                                             <li><a href="#">Saved Jobs</a></li>
                                             <li><a href="#">Proposals</a></li>
@@ -77,15 +76,15 @@
                                             <li><a href="#">My Project</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Hire</a>
-                                        <ul>
+                                    <li class="menu-item-has-children"><a href="#">Hire</a>
+                                        <ul class="sub-menu">
                                             <li><a href="#">Find Freelancer</a></li>
                                             <li><a href="#">Saved Freelancer</a></li>
                                             <li><a href="#">Hired Freelancer</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Reports</a>
-                                        <ul>
+                                    <li class="menu-item-has-children"><a href="#">Reports</a>
+                                        <ul class="sub-menu">
                                             <li><a href="#">Overview</a></li>
                                             <li><a href="#">My Reports</a></li>
                                             <li><a href="#">Proposal History</a></li>
@@ -95,9 +94,22 @@
                                             <li><a href="#">Dispute List</a></li>
                                         </ul>
                                     </li>
+                                    <li class="d-block d-lg-none">
+                                        <a href="#">Logout</a>
+                                    </li>
                                 </ul>
+
+                                <!-- Only visible below 991px -->
+                                <div class="mobile-content d-block d-lg-none">
+                                    <div class="available-status">
+                                        <button type="button" class="online active">Online <i class="fas fa-check"></i></button>
+                                        <button type="button" class="away">Away <i class="fas fa-check"></i></button>
+                                    </div>
+                                </div>
+                                <!-- Only visible below 991px -->
                             </div>
-                            <div class="header-search-box position-relative order-1 order-lg-2">
+                            
+                            <div class="header-search-box d-none d-lg-block position-relative order-1 order-lg-2">
                                 <button id="search-box-trigger" class="search-box-trigger" type="button">
                                     <i class="fas fa-search"></i> Search <span class="angle-icon">
                                     <i class="fas fa-angle-down"></i></span>
@@ -123,19 +135,19 @@
                         </div>
                         <div class="col-lg-3">
                             <div class="header-right-section d-flex justify-content-end align-items-center h-100">
-                                <div class="message-box position-relative">
+                                <div class="message-box d-none d-lg-block position-relative">
                                     <a href="#">Inbox <span class="mnumber">5</span></a>
                                 </div>
-                                <div class="notification-box position-relative">
+                                <div class="notification-box d-none d-lg-block position-relative">
                                     <a href="#"><i class="fas fa-bell"></i> <span class="nnumber">1</span></a>
                                 </div>
                                 <div class="user-detail dropdown">
-                                    <div class="profile-tigger" type="button" id="dropdownMenuButton" >
-                                        <img class="profile-image" src="img/user-profile.svg" alt="">
+                                    <div class="profile-tigger d-none d-lg-block" type="button" id="dropdownMenuButton" >
+                                        <img class="profile-image" src="img/user-1.svg" alt="">
                                     </div>
                                     <div class="dropdown-menu">
-                                        <div class="user-profile-info position-relative d-block d-lg-none">
-                                            <img src="img/user-profile.svg" alt="">
+                                        <div class="user-profile-info position-relative">
+                                            <img class="profile-image" src="img/user-1.svg" alt="">
                                             <h3 class="username">Hi, Apurba</h3>
                                             <h3 class="usertitle">Buyer</h3>
                                         </div>
@@ -144,12 +156,15 @@
                                             <a href="#Profile">My Profile</a>
                                             <a href="#Profile">Membership</a>
                                             <a href="#">Buy Bid Credit</a>
-                                            <a href="#">Logout</a>
+                                            <a class="d-none d-lg-block" href="#">Logout</a>
                                         </div>
-                                        <div class="available-status">
-                                            <button type="button" class="online">Online</button>
-                                            <button type="button" class="away">Away</button>
+
+                                        <!-- Only visible below 991px -->
+                                        <div class="available-status d-none d-lg-block">
+                                            <button type="button" class="online active">Online <i class="fas fa-check"></i></button>
+                                            <button type="button" class="away">Away <i class="fas fa-check"></i></button>
                                         </div>
+                                        <!-- Only visible below 991px -->
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +175,9 @@
         </div>
         <!-- header-area ends -->
 
-        <div class="container" style="padding: 100px 0;">
+        <div class="divider d-block d-lg-none"></div>
+
+        <div class="container" style="">
             <div class="row">
                 <div class="col">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam rerum dolorem, quos incidunt quidem iure eligendi, beatae magnam quibusdam, soluta voluptatibus expedita asperiores sed impedit vero optio ea reprehenderit magni hic suscipit? Sint cum eum quae, aspernatur optio tempora explicabo quis dolorem accusantium natus voluptate eos atque sapiente magni? Recusandae?</p>
@@ -276,7 +293,6 @@
         <script src="js/jquery.nice-select.min.js"></script>
         <script src="js/slick.min.js"></script>
         <script src="js/aos.js"></script>
-        <script src="js/jquery.meanmenu.min.js"></script>
 
         <!--Active & Custom JS-->
         <script src="js/main.js"></script>

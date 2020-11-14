@@ -10,6 +10,14 @@
     box-shadow: 0 1px 6px rgba(57,73,76,0.35);
     .logo{
         height: 70px;
+        img{
+            max-width: 130px;
+        }
+    }
+    .notification-box {
+        @include all-below-med{
+            margin-right: 62px;
+        }
     }
 }
 .header{
@@ -178,6 +186,9 @@
     padding: 10px 0;
     box-shadow: 0px 0px 6px -2px rgba(49,73,99,0.59);
     border-radius: 4px;
+    @include all-below-med{
+        transition: inherit;
+    }
 }
 .mainmenu ul li ul ul {
     left: 100%;
@@ -205,87 +216,6 @@
 .mainmenu ul li ul li:hover ul {
     top: 0;
 }
-
-
-/* =======slicknav_menu======== */
-// .slicknav_menu {
-//     @extend %displaynone;
-//     @include all-below-med(){
-//         display: block;
-//         background: #ddd;
-//         position: fixed;
-//         left: 0;
-//         top: -10px;
-//         right: 0;
-//         width: 720px;
-//         z-index: 999999999999;
-//         margin: 0 auto;
-//         height: 0;
-//         span.slicknav_menutxt {
-//             display: none;
-//         }
-//         .slicknav_btn {
-//             padding: 0;
-//             margin: 0px 11px 0 0;
-//             font-size: 30px;
-//             background: none;
-//             top: 38px;
-//             right: 15px;
-//             @include mobile-lg{
-//                 margin: 0px -5px 0 0;
-//             }
-//             &:hover{
-//                 background: none;
-//             }
-//         }
-//         .slicknav_icon {
-//             margin: 0;
-//             span {
-//                 background-color: #262262;
-//                 border-radius: 0px;
-//             }
-//         }
-//         .slicknav_nav {
-//             padding: 10px 0;
-//             background: #fff;
-//             position: absolute;
-//             left: 0;
-//             top: 100px;
-//             width: 100%;
-//             box-shadow: 2px 10px 30px -14px #000;
-//             .slicknav_row {
-//                 padding: 0;
-//                 a{
-//                     padding: 10px 15px;
-//                     display: inline-block;
-//                 }
-//             }
-//             .slicknav_row{
-//                 border-radius: 0px;
-//                 &:hover {
-//                     border-radius: 0px;
-//                 }
-//             }
-//         }
-//         a {
-//             padding: 10px 15px;
-//             font-size: 16px;
-//             color: #000;
-//             border-radius: 0;
-//             &:hover {
-//                 border-radius: 0;
-//             }
-//         }
-        
-//     }
-//     @include all-below-mobile-lg(){
-//         width: 540px;
-//     };
-//     @include all-mx-mobile(){
-//         width: 100%;
-//     };
-// }
-
 
 
 // Sticky Header with smooth animation
@@ -357,103 +287,91 @@
 .header.header-style-2{
     .header-area{
         @include all-below-med{
-            position: fixed;
-            right: 0;
-            top: 0;
-            width: 100%;
-            height: auto;
-            background: #fff;
-            padding: 0 10px;
-            text-align: inherit;
-            transition: all .5s ease;
-            &.active{
-                right: 0;
+            padding: 0;
+            .site-logo{
+                display: none !important;
             }
-            .site-logo {
-                height: 70px;
-                margin: inherit;
-                margin-top: 0;
-                margin-left: 70px;
+            .container {
+                padding-right: 0;
+                padding-left: 0;
             }
             .mainmenu {
-                // width: auto;
-                display: none !important;
+                text-align: left;
             }
-            .mainmenu > ul>li {
-                display: inline-block;
-                border-bottom: 0;
+            .mainmenu ul li{
+                &.active .menu-expand  {
+                    transform: rotate(180deg);
+                    top: 10px;
+                }
             }
             .mainmenu ul>li>a {
-                padding: 15px 15px;
+                padding: 12px 0 12px 30px;
+                display: block;
             }
-            .mobile-menu-close-trigger, .header-search-box{
-                display: none !important;
+            .mainmenu ul li:hover>ul, .mainmenu ul li>ul {
+                top: 0;
+                opacity: 1;
+                visibility: visible;
+                position: relative;
+                width: 100%;
+                padding: 0;
+                box-shadow: none;
             }
-            
-
-            
+            .mainmenu ul>li > ul > li {
+                border: 0;
+                &:last-child{
+                    padding-bottom: 10px;
+                }
+            }
+            .mainmenu ul>li > ul > li a {
+                padding: 7px 0 7px 30px;
+                font-size: 15px;
+            }
+            .menu-expand {
+                position: absolute;
+                display: block;
+                right: 15px;
+                top: 15px;
+                transition: all .3s ease;
+                i{
+                    font-size: 18px;
+                }
+            }
         }
-
         
     }
 }
 
-body.mean-active .mean-container .mean-nav {
-    right: auto;
-    left: 0;
-}
-.mean-container .mean-nav {
-    font-size: 16px;
-    position: fixed;
-    right: auto;
-    margin: 0;
-    top: 0;
-    bottom: 0;
-    width: 80%;
-    overflow: auto;
-    left: -80%;
-}
-.mean-container {
-    position: relative;
-    .mean-bar {
-        position: absolute;
-        left: 10px;
-        top: 8px;
-        z-index: 9999;
-    }
-}
 
-
-
-.top-nav ul{
-    background-color: #010101;
-    list-style: none;  
-}
-#top-nav ul li{
-    display: inline-block;
-}
-#top-nav ul li a{
-    display: block;
-    // color:#f9f9f9;
-    padding: 10px 20px;
-}
-#top-nav ul li a:hover{
-    background-color: #666;
-}
+// .top-nav ul{
+//     background-color: #010101;
+//     list-style: none;  
+// }
+// #top-nav ul li{
+//     display: inline-block;
+// }
+// #top-nav ul li a{
+//     display: block;
+//     // color:#f9f9f9;
+//     padding: 10px 20px;
+// }
+// #top-nav ul li a:hover{
+//     background-color: #666;
+// }
 /* Dropdown */
-li.dropdown{position: relative;}
-ul.dropdown-menu{
-    position: absolute;
-    min-width: 120px;
-}
-ul.dropdown-menu li{
-    display: block !important;
-    white-space: nowrap;
-}
-/* Display none by Default */
-ul.dropdown-menu{
-    display: none;
-}
+// li.dropdown{position: relative;}
+// ul.dropdown-menu{
+//     position: absolute;
+//     min-width: 120px;
+// }
+// ul.dropdown-menu li{
+//     display: block !important;
+//     white-space: nowrap;
+// }
+// /* Display none by Default */
+// ul.dropdown-menu{
+//     display: none;
+// }
   
   
 .overlay {

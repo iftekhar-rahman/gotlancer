@@ -51,6 +51,9 @@
 .header-style-2{
     .header-area{
         box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+        @include all-below-med{
+            box-shadow: none;
+        }
     }
     .user-detail.dropdown {
         margin-left: 28px;

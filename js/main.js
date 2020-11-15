@@ -122,20 +122,15 @@ jQuery(document).ready(function($){
             }
         });
 
-        // Off Canvas Open close
-        // $(".off-canvas-btn").on('click', function() {
-        //     $(".off-canvas-wrapper").addClass('open');
-        // });
-
-        // $(".btn-close-off-canvas").on('click', function() {
-        //     $(".off-canvas-wrapper").removeClass('open');
-        // });
     }
     else {
     // alert('More than 960');
     }
 
         
+    $(".heart-icon").on("click", function(){
+        $(this).toggleClass("active");
+    });
 
     
    

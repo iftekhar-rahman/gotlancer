@@ -124,7 +124,6 @@ jQuery(document).ready(function($){
 
     }
     else {
-    // alert('More than 960');
     }
 
         

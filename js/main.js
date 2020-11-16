@@ -13,11 +13,20 @@ jQuery(document).ready(function($){
         });
     });
 
+    // mobile-menu
     $(".mobile-menu-trigger").on("click", function(){
         $(".header-area, .overlay").addClass("active");
     });
     $(".mobile-menu-close-trigger, .overlay").on("click", function(){
         $(".header-area, .overlay").removeClass("active");
+    });
+
+    // sidebar
+    $(".sidebar-trigger").on("click", function(){
+        $(".overlay, .sidebar").addClass("active");
+    });
+    $(".close-btn, .overlay").on("click", function(){
+        $(".overlay, .sidebar").removeClass("active");
     });
 
     // Sticky Header with smooth animation

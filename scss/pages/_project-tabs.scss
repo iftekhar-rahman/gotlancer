@@ -5,10 +5,26 @@
 // .project-heading-area
 .project-heading-area {
     padding: 30px 0 50px;
-    h4 {
+    @include all-below-med{
+        padding: 20px 0 20px;
+    }
+    h4.top-title {
         color: #3F4254;
         font-size: 18px;
         margin-bottom: 20px;
+        @include all-mx-mobile{
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    }
+    @include all-mx-mobile{
+        .col7{
+            width: 72%;
+        }
+        .col5{
+            width: 28%;
+            padding-left: 0;
+        }
     }
     .tags {
         span {
@@ -50,6 +66,16 @@
 
 // .sidebar
 .sidebar {
+    transition: all .5s ease;
+    @include all-below-med{
+        position: fixed;
+        left: -320px;
+        top: 0;
+        background: #fff;
+        z-index: 9999999;
+        width: 320px;
+        height: 100%;
+    }
     .boxed-btn.milestone {
         width: 100%;
         margin-bottom: 15px;
@@ -64,6 +90,9 @@
     ul {
         li {
             position: relative;
+            @include all-below-med{
+                border-bottom: 1px solid #E6E6E6;
+            }
             a {
                 color: #485E76;
                 font-size: 13px;
@@ -72,12 +101,18 @@
                 width: 100%;
                 padding: 18px 20px 18px 70px;
                 @extend %basetransition1;
+                @include all-below-med{
+                    padding: 14px 20px 14px 50px;
+                }
                 i {
                     position: absolute;
                     left: 37px;
                     top: 50%;
                     transform: translate(0px, -50%);
                     font-size: 18px;
+                    @include all-below-med{
+                        left: 18px;
+                    }
                 }
             }
             &:hover {
@@ -88,6 +123,9 @@
             }
         }
     }
+    &.active{
+        left: 0;
+    }
 }
 
 // .projects-top-bar 
@@ -97,6 +135,12 @@
     border-radius: 7px;
     box-shadow: 0px 0px 6px -2px rgba(49, 73, 99, 0.59);
     margin-bottom: 15px;
+    @include all-below-med{
+        padding: 10px 15px;
+    }
+    @include all-mx-mobile{
+        padding: 10px 10px;
+    }
     a {
         border: 1px solid #BFC0C5;
         border-radius: 5px;
@@ -137,12 +181,32 @@
             }
         }
     }
+    .create-milestone {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 27px;
+        height: 42px;
+        padding: 7px 20px;
+        background: #74B95C;
+        color: #fff;
+        border-color: #74B95C;
+        &:hover {
+            background: #314963;
+            border-color: #314963;
+        }
+        @include all-mx-mobile{
+            padding: 7px 10px;
+        }
+    }
 }
 
 .freelancers-applied {
     color: #8CA2BB;
     font-size: 16px;
     margin-bottom: 20px;
+    @include all-below-med{
+        margin-bottom: 15px;
+    }
     .applied-job {
         margin-left: 10px;
         span {
@@ -154,6 +218,9 @@
 }
 .project-tab-content-area {
     padding-bottom: 50px;
+    @include all-below-med{
+        padding-bottom: 30px;
+    }
 }
 // .single-poposal-item 
 .single-poposal-item {
@@ -164,14 +231,41 @@
     .poposal-content {
         padding: 20px 20px 12px;
         border-bottom: 1px solid #EBEDF3;
+        @include mx-desktops{
+            padding: 20px 10px 12px;
+        }
+        @include all-mx-mobile{
+            padding: 20px 10px 12px;
+        }
         .user-thumb {
             flex-basis: 100px;
+            @include all-below-med{
+                flex-basis: 100%;
+            }
             img {
                 max-width: 80px;
+                @include all-below-med{
+                    max-width: 70px;
+                }
             }
         }
         .user-detail {
             flex-basis: 505px;
+            @include mx-desktops{
+                flex-basis: 410px;
+            }
+            @include all-below-med{
+                flex-basis: 100%;
+                .user-title {
+                    position: absolute;
+                    left: 105px;
+                    top: 34px;
+                    @include all-mx-mobile{
+                        left: 95px;
+                    }
+                }
+            }
+            
             h5 {
                 color: #A6AFBC;
                 font-size: 13px;
@@ -198,6 +292,15 @@
             .cover-letter{
                 font-size: 12px;
                 padding-right: 80px;
+                @include mx-desktops{
+                    padding-right: 50px;
+                }
+                @include all-below-med{
+                    margin: 10px 0;
+                }
+                @include all-below-mobile-lg{
+                    padding-right: 0;
+                }
                 h4 {
                     @extend %primary-color;
                     font-size: 14px;
@@ -210,6 +313,21 @@
         }
         .user-rate {
             flex-basis: 180px;
+            @include mx-desktops{
+                flex-basis: 160px;
+            }
+            @include all-below-med{
+                flex-basis: 100%;
+                .user-rate-title{
+                    order: 0;
+                }
+                .user-rate-btn{
+                    order: 2;
+                }
+                .success-rate{
+                    order: 1;
+                }
+            }
             h3 {
                 @extend %secondary-color;
                 font-size: 25px;
@@ -226,10 +344,16 @@
                 font-size: 13px;
                 font-weight: 500;
                 padding: 0px 18px;
+                @include mx-desktops{
+                    padding: 0 10px;
+                }
                 &.contact-btn {
                     margin-left: 10px;
                     background: #E3EAF4;
                     color: #485E76;
+                    @include mx-desktops{
+                        margin-left: 5px;
+                    }
                     &:hover {
                         @extend %secondary-bg-color;
                     }
@@ -244,6 +368,11 @@
                 margin-top: 12px;
                 font-size: 12px;
                 text-transform: capitalize;
+                @include all-below-med{
+                    width: 225px;
+                    margin-top: 0px;
+                    margin-bottom: 16px;
+                }
                 p {
                     margin: 0 0 5px;
                 }
@@ -252,6 +381,12 @@
                     background: #EBEDF3;
                     border-radius: 50px;
                     width: 145px;
+                    @include mx-desktops{
+                        width: 125px;
+                    }
+                    @include all-below-med{
+                        width: 190px;
+                    }
                     .progress-bar {
                         @extend %primary-bg-color;
                         border-radius: 50px;
@@ -278,12 +413,27 @@
     width: 505px;
     margin-left: 100px;
     margin-top: -12px;
+    @include mx-desktops{
+        margin-top: 0;
+    }
+    @include all-below-med{
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
     span {
         background: #E3EAF4;
         font-size: 12px;
         padding: 3px 7px;
         border-radius: 2px;
         margin-right: 5px;
+        @include all-below-mobile-lg{
+            padding: 3px 5px;
+        }
+        @include all-mx-mobile{
+            margin-right: 2px;
+        }
         &:last-child {
             margin-right: 0;
         }
@@ -292,18 +442,73 @@
 
 .poposal-footer {
     padding: 10px 20px;
+    @include mx-desktops{
+        padding: 10px 10px;
+    }
+    @include all-below-med{
+        padding: 3px 20px 15px;
+    }
+    @include all-mx-mobile{
+        padding: 3px 10px 15px;
+    }
     .single-footer {
         @extend %secondary-color;
         font-size: 13px;
         padding-left: 35px;
         width: 150px;
+        @include all-below-med{
+            width: 33.3333%;
+            margin: 7px 0;
+        }
+        @include all-below-mobile-lg{
+            width: 55%;
+        }
         &.one {
             width: 195px;
+            @include mx-desktops{
+                width: 200px;
+            }
+            @include all-below-med{
+                width: 33.3333%;
+            }
+            @include all-below-mobile-lg{
+                width: 55%;
+            }
+        }
+        &.hours {
+            @include all-below-mobile-lg{
+                width: 45%;
+            }
+        }
+        &.reviews {
+            @include mx-desktops{
+                width: 165px;
+            }
+            @include all-below-med{
+                width: 33.3333%;
+            }
+            @include all-below-mobile-lg{
+                width: 55%;
+            }
+        }
+        &.country {
+            @include all-below-mobile-lg{
+                width: 45%;
+            }
         }
         &.five {
             width: 140px;
             padding-left: 0;
             font-size: 15px;
+            @include mx-desktops{
+                width: 120px;
+            }
+            @include all-below-med{
+                width: 33.3333%;
+            }
+            @include all-below-mobile-lg{
+                width: 55%;
+            }
         }
         strong {
             display: block;

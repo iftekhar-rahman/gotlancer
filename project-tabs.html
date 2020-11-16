@@ -182,14 +182,14 @@
             <div class="project-heading-area">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-9">
-                            <h4>I need a WordPress Site (5pages) and a Logo design</h4>
+                        <div class="col-sm-9 col7">
+                            <h4 class="top-title">I need a WordPress Site (5pages) and a Logo design</h4>
                             <div class="tags">
                                 <span class="country">NDA</span>
                                 <span class="duration">LONG TERM</span>
                             </div>
                         </div>
-                        <div class="col-lg-3">
+                        <div class="col-sm-3  col5">
                             <div class="right-content d-flex align-items-center justify-content-end">
                                 <a href="#">Open</a>
                                 <span class="info" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fas fa-question"></i></span>
@@ -207,7 +207,19 @@
                         <div class="col-lg-3">
                             <!-- sidebar starts -->
                             <div class="sidebar">
-                                <a href="#" class="boxed-btn milestone">Create Milestone</a>
+                                <!-- visible only below 991px viewport starts -->
+                                <div class="visible-on-small-device d-block d-lg-none">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="logo">
+                                            <img src="img/logo.png" alt="gotlancer">
+                                        </div>
+                                        <div class="close-btn">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- visible only below 991px viewport ends -->
+                                <a href="#" class="boxed-btn milestone d-none d-lg-block">Create Milestone</a>
                                 <ul>
                                     <li><a href="#"><i class="fas fa-users"></i> Proposals</a></li>
                                     <li><a href="#"><i class="fas fa-user"></i> Hired Freelancer</a></li>
@@ -225,13 +237,20 @@
                         <div class="col-lg-9">
                             <div class="projects-top-bar">
                                 <div class="row">
-                                    <div class="col-6 d-flex align-items-center">
-                                        <a class="filter" href="#"><i class="fas fa-filter"></i> Filter</a>
-                                        <a class="invite" href="#"><i class="fas fa-plus"></i> Invite a freelancer</a>
+                                    <div class="col-7 d-flex align-items-center">
+                                        <a href="#" class="filter d-none d-lg-block"><i class="fas fa-filter"></i> Filter</a>
+                                        <a href="#" class="invite d-none d-lg-block"><i class="fas fa-plus"></i> Invite a freelancer</a>
+                                        <a href="#" class="create-milestone  d-block d-lg-none">Create Milestone</a>
                                     </div>
-                                    <div class="col-6 text-right">
-                                        <a class="nextprev" href="#">Previous</a>
-                                        <a class="nextprev active" href="#">Next</a>
+                                    <div class="col-5 text-right">
+                                        <a href="#" class="nextprev d-none d-lg-inline-block">Previous</a>
+                                        <a href="#" class="nextprev active d-none d-lg-inline-block">Next</a>
+                                        <div class="sidebar-trigger position-relative d-block d-lg-none">
+                                            <span class="bar bar-1"></span>
+                                            <span class="bar bar-2"></span>
+                                            <span class="bar bar-3"></span>
+                                            <span class="menu-text">Menu</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -241,25 +260,31 @@
                             </div>
                             <!-- single-poposal-item starts -->
                             <div class="single-poposal-item sopnsored position-relative">
-                                <span class="sopnsored-tag">Sopnsored</span>
+                                <span class="sopnsored-tag d-none d-lg-block">Sopnsored</span>
                                 <div class="poposal-content">
-                                    <div class="d-flex">
+                                    <div class="d-flex flex-wrap flex-lg-nowrap">
                                         <div class="user-thumb d-flex align-items-center">
                                             <span><img src="img/proposal-sender.svg" alt=""></span>
                                         </div>
                                         <div class="user-detail">
-                                            <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i> Offline</span></h3>
-                                            <h5>Product Manager</h5>
+                                            <div class="user-title">
+                                                <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i> Offline</span></h3>
+                                                <h5>Product Manager</h5>
+                                            </div>
                                             <div class="cover-letter">
                                                 <h4>Cover Letter:</h4>
                                                 <p>Greg is a product strategy consultant and trainer with nearly 20 years of experience shipping digital enterprise  products at IBM. <a href="#">View More</a></p>
                                             </div>
                                         </div>
-                                        <div class="user-rate">
-                                            <h3>$500 USD</h3>
-                                            <h4>In 1 day</h4>
-                                            <a href="#" class="boxed-btn">Hire me</a>
-                                            <a href="#" class="boxed-btn contact-btn">Contact</a>
+                                        <div class="user-rate d-flex flex-column d-lg-block">
+                                            <div class="user-rate-title">
+                                                <h3>$500 USD</h3>
+                                                <h4>In 1 day</h4>
+                                            </div>
+                                            <div class="user-rate-btn">
+                                                <a href="#" class="boxed-btn">Hire me</a>
+                                                <a href="#" class="boxed-btn contact-btn">Contact</a>
+                                            </div>
                                             <div class="success-rate">
                                                 <p>Success Rate</p>
                                                 <div class="position-relative">
@@ -277,14 +302,14 @@
                                         <span>Logo Design</span>
                                     </div>
                                 </div>
-                                <div class="poposal-footer d-flex">
+                                <div class="poposal-footer d-flex flex-wrap flex-lg-nowrap">
                                     <div class="single-footer one position-relative">
                                         <span class="absolute-icon"><i class="fas fa-clipboard"></i></span> Project Completed<br/> <span class="project-number">500</span>
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer hours position-relative">
                                         <span class="absolute-icon"><i class="fas fa-clock"></i></span> Total Hours<br/> 1225
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer reviews position-relative">
                                         <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 486 Reviews</div>
                                         <div class="stars">
                                             <span><i class="fas fa-star"></i></span>
@@ -294,10 +319,10 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer country position-relative">
                                         <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Country <strong>United State</strong>
                                     </div>
-                                    <div class="single-footer five d-flex align-items-center justify-content-end">
+                                    <div class="single-footer five d-flex align-items-center justify-content-start justify-content-lg-end">
                                         Saved 
                                         <span class="heart-icon position-relative">
                                             <span class="blank"><i class="far fa-heart"></i></span>
@@ -310,23 +335,29 @@
                             <!-- single-poposal-item starts -->
                             <div class="single-poposal-item position-relative">
                                 <div class="poposal-content">
-                                    <div class="d-flex">
+                                    <div class="d-flex flex-wrap flex-lg-nowrap">
                                         <div class="user-thumb d-flex align-items-center">
                                             <span><img src="img/proposal-sender.svg" alt=""></span>
                                         </div>
                                         <div class="user-detail">
-                                            <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i> Offline</span></h3>
-                                            <h5>Product Manager</h5>
+                                            <div class="user-title">
+                                                <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i> Offline</span></h3>
+                                                <h5>Product Manager</h5>
+                                            </div>
                                             <div class="cover-letter">
                                                 <h4>Cover Letter:</h4>
                                                 <p>Greg is a product strategy consultant and trainer with nearly 20 years of experience shipping digital enterprise  products at IBM. <a href="#">View More</a></p>
                                             </div>
                                         </div>
-                                        <div class="user-rate">
-                                            <h3>$500 USD</h3>
-                                            <h4>In 1 day</h4>
-                                            <a href="#" class="boxed-btn">Hire me</a>
-                                            <a href="#" class="boxed-btn contact-btn">Contact</a>
+                                        <div class="user-rate d-flex flex-column d-lg-block">
+                                            <div class="user-rate-title">
+                                                <h3>$500 USD</h3>
+                                                <h4>In 1 day</h4>
+                                            </div>
+                                            <div class="user-rate-btn">
+                                                <a href="#" class="boxed-btn">Hire me</a>
+                                                <a href="#" class="boxed-btn contact-btn">Contact</a>
+                                            </div>
                                             <div class="success-rate">
                                                 <p>Success Rate</p>
                                                 <div class="position-relative">
@@ -344,14 +375,14 @@
                                         <span>Logo Design</span>
                                     </div>
                                 </div>
-                                <div class="poposal-footer d-flex">
+                                <div class="poposal-footer d-flex flex-wrap flex-lg-nowrap">
                                     <div class="single-footer one position-relative">
                                         <span class="absolute-icon"><i class="fas fa-clipboard"></i></span> Project Completed<br/> <span class="project-number">500</span>
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer hours position-relative">
                                         <span class="absolute-icon"><i class="fas fa-clock"></i></span> Total Hours<br/> 1225
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer reviews position-relative">
                                         <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 486 Reviews</div>
                                         <div class="stars">
                                             <span><i class="fas fa-star"></i></span>
@@ -361,10 +392,10 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer country position-relative">
                                         <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Country <strong>United State</strong>
                                     </div>
-                                    <div class="single-footer five d-flex align-items-center justify-content-end">
+                                    <div class="single-footer five d-flex align-items-center justify-content-start justify-content-lg-end">
                                         Saved 
                                         <span class="heart-icon position-relative">
                                             <span class="blank"><i class="far fa-heart"></i></span>
@@ -377,23 +408,29 @@
                             <!-- single-poposal-item starts -->
                             <div class="single-poposal-item position-relative">
                                 <div class="poposal-content">
-                                    <div class="d-flex">
+                                    <div class="d-flex flex-wrap flex-lg-nowrap">
                                         <div class="user-thumb d-flex align-items-center">
                                             <span><img src="img/proposal-sender.svg" alt=""></span>
                                         </div>
                                         <div class="user-detail">
-                                            <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i> Offline</span></h3>
-                                            <h5>Product Manager</h5>
+                                            <div class="user-title">
+                                                <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i> Offline</span></h3>
+                                                <h5>Product Manager</h5>
+                                            </div>
                                             <div class="cover-letter">
                                                 <h4>Cover Letter:</h4>
                                                 <p>Greg is a product strategy consultant and trainer with nearly 20 years of experience shipping digital enterprise  products at IBM. <a href="#">View More</a></p>
                                             </div>
                                         </div>
-                                        <div class="user-rate">
-                                            <h3>$500 USD</h3>
-                                            <h4>In 1 day</h4>
-                                            <a href="#" class="boxed-btn">Hire me</a>
-                                            <a href="#" class="boxed-btn contact-btn">Contact</a>
+                                        <div class="user-rate d-flex flex-column d-lg-block">
+                                            <div class="user-rate-title">
+                                                <h3>$500 USD</h3>
+                                                <h4>In 1 day</h4>
+                                            </div>
+                                            <div class="user-rate-btn">
+                                                <a href="#" class="boxed-btn">Hire me</a>
+                                                <a href="#" class="boxed-btn contact-btn">Contact</a>
+                                            </div>
                                             <div class="success-rate">
                                                 <p>Success Rate</p>
                                                 <div class="position-relative">
@@ -411,14 +448,14 @@
                                         <span>Logo Design</span>
                                     </div>
                                 </div>
-                                <div class="poposal-footer d-flex">
+                                <div class="poposal-footer d-flex flex-wrap flex-lg-nowrap">
                                     <div class="single-footer one position-relative">
                                         <span class="absolute-icon"><i class="fas fa-clipboard"></i></span> Project Completed<br/> <span class="project-number">500</span>
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer hours position-relative">
                                         <span class="absolute-icon"><i class="fas fa-clock"></i></span> Total Hours<br/> 1225
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer reviews position-relative">
                                         <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 486 Reviews</div>
                                         <div class="stars">
                                             <span><i class="fas fa-star"></i></span>
@@ -428,10 +465,10 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer country position-relative">
                                         <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Country <strong>United State</strong>
                                     </div>
-                                    <div class="single-footer five d-flex align-items-center justify-content-end">
+                                    <div class="single-footer five d-flex align-items-center justify-content-start justify-content-lg-end">
                                         Saved 
                                         <span class="heart-icon position-relative">
                                             <span class="blank"><i class="far fa-heart"></i></span>
@@ -444,23 +481,29 @@
                             <!-- single-poposal-item starts -->
                             <div class="single-poposal-item position-relative">
                                 <div class="poposal-content">
-                                    <div class="d-flex">
+                                    <div class="d-flex flex-wrap flex-lg-nowrap">
                                         <div class="user-thumb d-flex align-items-center">
                                             <span><img src="img/proposal-sender.svg" alt=""></span>
                                         </div>
                                         <div class="user-detail">
-                                            <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i> Offline</span></h3>
-                                            <h5>Product Manager</h5>
+                                            <div class="user-title">
+                                                <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i> Offline</span></h3>
+                                                <h5>Product Manager</h5>
+                                            </div>
                                             <div class="cover-letter">
                                                 <h4>Cover Letter:</h4>
                                                 <p>Greg is a product strategy consultant and trainer with nearly 20 years of experience shipping digital enterprise  products at IBM. <a href="#">View More</a></p>
                                             </div>
                                         </div>
-                                        <div class="user-rate">
-                                            <h3>$500 USD</h3>
-                                            <h4>In 1 day</h4>
-                                            <a href="#" class="boxed-btn">Hire me</a>
-                                            <a href="#" class="boxed-btn contact-btn">Contact</a>
+                                        <div class="user-rate d-flex flex-column d-lg-block">
+                                            <div class="user-rate-title">
+                                                <h3>$500 USD</h3>
+                                                <h4>In 1 day</h4>
+                                            </div>
+                                            <div class="user-rate-btn">
+                                                <a href="#" class="boxed-btn">Hire me</a>
+                                                <a href="#" class="boxed-btn contact-btn">Contact</a>
+                                            </div>
                                             <div class="success-rate">
                                                 <p>Success Rate</p>
                                                 <div class="position-relative">
@@ -478,14 +521,14 @@
                                         <span>Logo Design</span>
                                     </div>
                                 </div>
-                                <div class="poposal-footer d-flex">
+                                <div class="poposal-footer d-flex flex-wrap flex-lg-nowrap">
                                     <div class="single-footer one position-relative">
                                         <span class="absolute-icon"><i class="fas fa-clipboard"></i></span> Project Completed<br/> <span class="project-number">500</span>
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer hours position-relative">
                                         <span class="absolute-icon"><i class="fas fa-clock"></i></span> Total Hours<br/> 1225
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer reviews position-relative">
                                         <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 486 Reviews</div>
                                         <div class="stars">
                                             <span><i class="fas fa-star"></i></span>
@@ -495,10 +538,10 @@
                                             <span><i class="fas fa-star"></i></span>
                                         </div>
                                     </div>
-                                    <div class="single-footer position-relative">
+                                    <div class="single-footer country position-relative">
                                         <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Country <strong>United State</strong>
                                     </div>
-                                    <div class="single-footer five d-flex align-items-center justify-content-end">
+                                    <div class="single-footer five d-flex align-items-center justify-content-start justify-content-lg-end">
                                         Saved 
                                         <span class="heart-icon position-relative">
                                             <span class="blank"><i class="far fa-heart"></i></span>

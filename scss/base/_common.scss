@@ -195,35 +195,40 @@ textarea {
 
 
 /*========== default checkbox style =============*/
-// input[type=checkbox]{
-//     display:none;
-// }
-// input[type=checkbox] + label:before {
-//     border: 1px solid rgb(255, 255, 255);
-//     content: "";
-//     display: inline-block;
-//     font-size: 30px;
-//     height: 20px;
-//     line-height: 11px;
-//     margin: -4px 5px 0 0;
-//     text-align: center;
-//     vertical-align: middle;
-//     width: 20px;
-//     border-radius: 50%;
-//     background-color: #fff;
-// }
-// input[type=checkbox]:checked + label:before {
-//     content: "\f00c";
-//     font-family: fontawesome;
-//     color: #1d1d1b;
-//     font-size: 15px;
-//     padding-top: 4px;
-// }
-// label {
-//     margin-right: 10px;
-//     font-weight: normal;
-//     cursor: pointer;
-// }
+input[type=checkbox]{
+    display:none;
+}
+input[type=checkbox] + label:before {
+    border: 1px solid#CCCCCC;
+    content: "";
+    display: inline-block;
+    font-size: 30px;
+    height: 18px;
+    width: 18px;
+    line-height: 11px;
+    margin: -2px 5px 0 0;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 3px;
+    background-color: #fff;
+}
+input[type=checkbox]:checked + label:before {
+    content: "";
+    // font-family: "Font Awesome 5 Free";
+    // @extend %primary-color;
+    @extend %primary-bg-color;
+    @extend %primary-border-color;
+    font-size: 15px;
+    padding-top: 4px;
+    background-image: url(../img/check.svg);
+    background-position: 4px 5px;
+    background-repeat: no-repeat;
+}
+label {
+    margin-right: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
 /*========== default radio button style =============*/
 // input[type=radio]{
 //     display:none;

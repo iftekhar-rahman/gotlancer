@@ -31,6 +31,9 @@
     .site-logo {
         height: 70px;
         margin-right: 20px;
+        img{
+            max-width: 170px;
+        }
     }
     .signing-section {
         @include all-below-med{

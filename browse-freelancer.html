@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Project tabs final</title>
+        <title>Browse Freelancer</title>
         
         <!--Libraries-->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -186,7 +186,7 @@
 
         <div class="project-wrapper">
             <!-- project-tab-content-area starts -->
-            <div class="project-tab-content-area project-tabs-section">
+            <div class="project-tab-content-area browse-freelancer-section project-tabs-section">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3">
@@ -266,7 +266,41 @@
                                 </div><!-- single-sidebar-item ends -->
                                 <!-- single-sidebar-item starts -->
                                 <div class="single-sidebar-item">
-                                    <h4>Project Budget</h4>
+                                    <h4>Selec Country</h4>
+                                    <form action="#">
+                                        <div class="form-check">
+                                            <input type="checkbox" id="allcountry" name="allcountry" value="Country">
+                                            <label for="allcountry"> All Country</label>
+                                        </div>
+                                    </form>
+                                    <div class="selectr-dropdown-list">
+                                        <select name="" id="">
+                                            <option value="">United State</option>
+                                            <option value="">United Kingdom</option>
+                                            <option value="">Canada</option>
+                                            <option value="">French</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                            <option value="">New Zealand</option>
+                                        </select>
+                                    </div>
+                                </div><!-- single-sidebar-item ends -->
+                                <div class="single-sidebar-item">
+                                    <h4>Hourly Rate</h4>
                                     <form action="#">
                                         <div class="form-check">
                                             <input type="checkbox" id="anybudget" name="anybudget" value="anybudget">
@@ -296,7 +330,7 @@
                                     <div class="col d-flex">
                                         <div class="project-search position-relative">
                                             <form action="#">
-                                                <input type="text" placeholder="Search for project" name="search">
+                                                <input type="text" placeholder="search freelancer/company" name="search">
                                                 <button type="submit"><i class="fas fa-search"></i></button>
                                             </form>
                                         </div>
@@ -310,51 +344,66 @@
                                 </div>
                             </div>
                             <div class="freelancers-applied jobs-found">
-                                <div class="applied-job"><span>45000</span> Jobs found</div>
-                            </div><!-- projects-top-bar ends -->
+                                <div class="applied-job"><span>45000</span> Freelancers found</div>
+                            </div>
+                            <!-- projects-top-bar ends -->
                             <!-- single-proposal-item starts -->
-                            <div class="single-proposal-item browse-project-item sopnsored position-relative">
+                            <div class="single-proposal-item browse-freelancer-item sopnsored position-relative">
+                                <span class="sopnsored-tag freelancer">Sponsored</span>
                                 <div class="proposal-content">
-                                    <div class="proposal-content-inner d-flex flex-wrap flex-lg-nowrap">
+                                    <div class="d-flex flex-wrap flex-lg-nowrap">
+                                        <div class="user-thumb">
+                                            <span>
+                                                <img src="img/user-2.svg" alt="">
+                                                <div class="online-status"></div>
+                                            </span>
+                                        </div>
                                         <div class="user-detail">
-                                            <div class="user-title d-flex flex-row flex-wrap flex-md-nowrap">
-                                                <h3>Logo Designer Need</h3>
-                                                <div class="tags">
-                                                    <span class="tag country">Nda</span>
-                                                    <span class="tag type">Featured</span>
+                                            <div class="user-title">
+                                                <div class="d-flex">
+                                                    <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i></span></h3>
+                                                    <h4 class="hightest-rated"><i class="fas fa-star"></i> Hightest rated</h4>
                                                 </div>
-                                            </div>
-                                            <div class="cover-letter">
-                                                <p>Greg is a product strategy consultant and trainer with nearly 20 years of experience shipping digital enterprise  products at IBM, Microsoft, and products and enterprise scale. <a href="#">View More</a></p>
+                                                <div class="freelancer-skills">
+                                                    MEAN Stack (Angular | Vue.js | Laravel | Node) 
+                                                </div>
+                                                <h5>United State</h5>
                                             </div>
                                         </div>
-                                        <div class="user-rate d-flex flex-row flex-lg-column justify-content-start justify-content-lg-between">
-                                            <div class="user-rate-title">
-                                                <h3>$500 USD</h3>
-                                                <h4>Fixed</h4>
+                                        <div class="user-rate d-flex flex-md-column d-lg-block">
+                                            <div class="user-rate-btn">
+                                                <a href="#" class="boxed-btn">Hire me</a>
+                                                <a href="#" class="boxed-btn contact-btn">Contact</a>
                                             </div>
-                                            <div class="job-posting-time">
-                                                <p>Posted 5 minutes ago</p>
+                                            <div class="user-rate-title">
+                                                <h3>$10/hr</h3>
+                                                <h4>Hourly rate</h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="user-skills">
-                                        <span>Adobe Illustrator</span>
-                                        <span>Adobe Photoshop</span>
-                                        <span>Logo Design</span>
+                                        <span>Augmented Reality (AR)</span>
+                                        <span>Virtual Reality (VR)</span>
+                                        <span>Unity3D</span>
                                     </div>
                                 </div>
                                 <div class="proposal-footer d-flex flex-wrap flex-lg-nowrap">
                                     <div class="single-footer one position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-clock"></i></span> Apply Before
-                                        <br/> <span class="highlighted-text">1 days 2hours</span>
+                                        <span class="absolute-icon"><i class="fas fa-dollar-sign"></i></span> Total Earning<br/> <span class="earnings">$25,000 USD</span>
                                     </div>
                                     <div class="single-footer hours position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-dollar-sign"></i></span> Payment method 
-                                        <br/> <span class="highlighted-text">Verified</span>
+                                        <span class="absolute-icon"><i class="fas fa-clock"></i></span> <div class="success-rate">
+                                            <p>Success Rate</p>
+                                            <div class="position-relative">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="progress-number">78%</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="single-footer reviews position-relative">
-                                        <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 0 Reviews</div>
+                                        <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 55 Reviews</div>
                                         <div class="stars">
                                             <span><i class="fas fa-star"></i></span>
                                             <span><i class="fas fa-star"></i></span>
@@ -364,10 +413,15 @@
                                         </div>
                                     </div>
                                     <div class="single-footer country position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Country <strong>United State</strong>
+                                        <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Certificates 
+                                        <div class="certificates">
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                        </div>
                                     </div>
                                     <div class="single-footer five d-flex align-items-center justify-content-start justify-content-lg-end">
-                                        Saved 
                                         <span class="heart-icon position-relative">
                                             <span class="blank"><i class="far fa-heart"></i></span>
                                             <span class="fill"><i class="fas fa-heart"></i></span>
@@ -377,48 +431,62 @@
                             </div>
                             <!-- single-proposal-item ends -->
                             <!-- single-proposal-item starts -->
-                            <div class="single-proposal-item browse-project-item position-relative">
+                            <div class="single-proposal-item browse-freelancer-item position-relative">
+                                <span class="sopnsored-tag freelancer">Sponsored</span>
                                 <div class="proposal-content">
-                                    <div class="proposal-content-inner d-flex flex-wrap flex-lg-nowrap">
+                                    <div class="d-flex flex-wrap flex-lg-nowrap">
+                                        <div class="user-thumb">
+                                            <span>
+                                                <img src="img/user-2.svg" alt="">
+                                                <div class="online-status"></div>
+                                            </span>
+                                        </div>
                                         <div class="user-detail">
-                                            <div class="user-title d-flex flex-row flex-wrap flex-md-nowrap">
-                                                <h3>Logo Designer Need</h3>
-                                                <div class="tags">
-                                                    <span class="tag top-project">Top project</span>
-                                                    <span class="tag urgent">Featured</span>
+                                            <div class="user-title">
+                                                <div class="d-flex">
+                                                    <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i></span></h3>
+                                                    <h4 class="top-rated-plus"><i class="fas fa-star"></i> Top rated plus</h4>
                                                 </div>
-                                            </div>
-                                            <div class="cover-letter">
-                                                <p>Greg is a product strategy consultant and trainer with nearly 20 years of experience shipping digital enterprise  products at IBM, Microsoft, and products and enterprise scale. <a href="#">View More</a></p>
+                                                <div class="freelancer-skills">
+                                                    MEAN Stack (Angular | Vue.js | Laravel | Node) 
+                                                </div>
+                                                <h5>United State</h5>
                                             </div>
                                         </div>
-                                        <div class="user-rate d-flex flex-row flex-lg-column justify-content-start justify-content-lg-between">
-                                            <div class="user-rate-title">
-                                                <h3>$500 USD</h3>
-                                                <h4>Fixed</h4>
+                                        <div class="user-rate d-flex flex-md-column d-lg-block">
+                                            <div class="user-rate-btn">
+                                                <a href="#" class="boxed-btn">Hire me</a>
+                                                <a href="#" class="boxed-btn contact-btn">Contact</a>
                                             </div>
-                                            <div class="job-posting-time">
-                                                <p>Posted 5 minutes ago</p>
+                                            <div class="user-rate-title">
+                                                <h3>$10/hr</h3>
+                                                <h4>Hourly rate</h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="user-skills">
-                                        <span>Adobe Illustrator</span>
-                                        <span>Adobe Photoshop</span>
-                                        <span>Logo Design</span>
+                                        <span>Augmented Reality (AR)</span>
+                                        <span>Virtual Reality (VR)</span>
+                                        <span>Unity3D</span>
                                     </div>
                                 </div>
                                 <div class="proposal-footer d-flex flex-wrap flex-lg-nowrap">
                                     <div class="single-footer one position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-clock"></i></span> Apply Before
-                                        <br/> <span class="highlighted-text">1 days 2hours</span>
+                                        <span class="absolute-icon"><i class="fas fa-dollar-sign"></i></span> Total Earning<br/> <span class="earnings">$25,000 USD</span>
                                     </div>
                                     <div class="single-footer hours position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-dollar-sign"></i></span> Payment method 
-                                        <br/> <span class="highlighted-text">Verified</span>
+                                        <span class="absolute-icon"><i class="fas fa-clock"></i></span> <div class="success-rate">
+                                            <p>Success Rate</p>
+                                            <div class="position-relative">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="progress-number">98%</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="single-footer reviews position-relative">
-                                        <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 0 Reviews</div>
+                                        <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 55 Reviews</div>
                                         <div class="stars">
                                             <span><i class="fas fa-star"></i></span>
                                             <span><i class="fas fa-star"></i></span>
@@ -428,10 +496,15 @@
                                         </div>
                                     </div>
                                     <div class="single-footer country position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Country <strong>United State</strong>
+                                        <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Certificates 
+                                        <div class="certificates">
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                        </div>
                                     </div>
                                     <div class="single-footer five d-flex align-items-center justify-content-start justify-content-lg-end">
-                                        Saved 
                                         <span class="heart-icon position-relative">
                                             <span class="blank"><i class="far fa-heart"></i></span>
                                             <span class="fill"><i class="fas fa-heart"></i></span>
@@ -441,49 +514,62 @@
                             </div>
                             <!-- single-proposal-item ends -->
                             <!-- single-proposal-item starts -->
-                            <div class="single-proposal-item browse-project-item position-relative">
+                            <div class="single-proposal-item browse-freelancer-item position-relative">
+                                <span class="sopnsored-tag freelancer">Sponsored</span>
                                 <div class="proposal-content">
-                                    <div class="applied-notice"><img src="img/check-2.svg" alt=""> You already Applied</div>
-                                    <div class="proposal-content-inner d-flex flex-wrap flex-lg-nowrap">
+                                    <div class="d-flex flex-wrap flex-lg-nowrap">
+                                        <div class="user-thumb">
+                                            <span>
+                                                <img src="img/user-2.svg" alt="">
+                                                <div class="online-status"></div>
+                                            </span>
+                                        </div>
                                         <div class="user-detail">
-                                            <div class="user-title d-flex flex-row flex-wrap flex-md-nowrap">
-                                                <h3>Logo Designer Need</h3>
-                                                <div class="tags">
-                                                    <span class="tag country">Nda</span>
-                                                    <span class="tag long-term">Long term</span>
+                                            <div class="user-title">
+                                                <div class="d-flex">
+                                                    <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i></span></h3>
+                                                    <h4 class="top-rated"><i class="fas fa-star"></i> Top rated</h4>
                                                 </div>
-                                            </div>
-                                            <div class="cover-letter">
-                                                <p>Greg is a product strategy consultant and trainer with nearly 20 years of experience shipping digital enterprise  products at IBM, Microsoft, and products and enterprise scale. <a href="#">View More</a></p>
+                                                <div class="freelancer-skills">
+                                                    MEAN Stack (Angular | Vue.js | Laravel | Node) 
+                                                </div>
+                                                <h5>United State</h5>
                                             </div>
                                         </div>
-                                        <div class="user-rate d-flex flex-row flex-lg-column justify-content-start justify-content-lg-between">
-                                            <div class="user-rate-title">
-                                                <h3>$10-$30 USD</h3>
-                                                <h4>Fixed</h4>
+                                        <div class="user-rate d-flex flex-md-column d-lg-block">
+                                            <div class="user-rate-btn">
+                                                <a href="#" class="boxed-btn">Hire me</a>
+                                                <a href="#" class="boxed-btn contact-btn">Contact</a>
                                             </div>
-                                            <div class="job-posting-time">
-                                                <p>Posted 5 minutes ago</p>
+                                            <div class="user-rate-title">
+                                                <h3>$10/hr</h3>
+                                                <h4>Hourly rate</h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="user-skills">
-                                        <span>Adobe Illustrator</span>
-                                        <span>Adobe Photoshop</span>
-                                        <span>Logo Design</span>
+                                        <span>Augmented Reality (AR)</span>
+                                        <span>Virtual Reality (VR)</span>
+                                        <span>Unity3D</span>
                                     </div>
                                 </div>
                                 <div class="proposal-footer d-flex flex-wrap flex-lg-nowrap">
                                     <div class="single-footer one position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-clock"></i></span> Apply Before
-                                        <br/> <span class="highlighted-text">1 days 2hours</span>
+                                        <span class="absolute-icon"><i class="fas fa-dollar-sign"></i></span> Total Earning<br/> <span class="earnings">$25,000 USD</span>
                                     </div>
                                     <div class="single-footer hours position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-dollar-sign"></i></span> Payment method 
-                                        <br/> <span class="highlighted-text">Verified</span>
+                                        <span class="absolute-icon"><i class="fas fa-clock"></i></span> <div class="success-rate">
+                                            <p>Success Rate</p>
+                                            <div class="position-relative">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 98%" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="progress-number">98%</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="single-footer reviews position-relative">
-                                        <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 0 Reviews</div>
+                                        <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 55 Reviews</div>
                                         <div class="stars">
                                             <span><i class="fas fa-star"></i></span>
                                             <span><i class="fas fa-star"></i></span>
@@ -493,10 +579,15 @@
                                         </div>
                                     </div>
                                     <div class="single-footer country position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Country <strong>United State</strong>
+                                        <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Certificates 
+                                        <div class="certificates">
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                        </div>
                                     </div>
                                     <div class="single-footer five d-flex align-items-center justify-content-start justify-content-lg-end">
-                                        Saved 
                                         <span class="heart-icon position-relative">
                                             <span class="blank"><i class="far fa-heart"></i></span>
                                             <span class="fill"><i class="fas fa-heart"></i></span>
@@ -506,49 +597,62 @@
                             </div>
                             <!-- single-proposal-item ends -->
                             <!-- single-proposal-item starts -->
-                            <div class="single-proposal-item browse-project-item position-relative">
+                            <div class="single-proposal-item browse-freelancer-item position-relative">
+                                <span class="sopnsored-tag freelancer">Sponsored</span>
                                 <div class="proposal-content">
-                                    <div class="applied-notice"><img src="img/check-2.svg" alt=""> You already Applied</div>
-                                    <div class="proposal-content-inner d-flex flex-wrap flex-lg-nowrap">
+                                    <div class="d-flex flex-wrap flex-lg-nowrap">
+                                        <div class="user-thumb">
+                                            <span>
+                                                <img src="img/user-2.svg" alt="">
+                                                <div class="online-status"></div>
+                                            </span>
+                                        </div>
                                         <div class="user-detail">
-                                            <div class="user-title d-flex flex-row flex-wrap flex-md-nowrap">
-                                                <h3>Logo Designer Need</h3>
-                                                <!-- <div class="tags">
-                                                    <span class="tag country">Nda</span>
-                                                    <span class="tag long-term">Long term</span>
-                                                </div> -->
-                                            </div>
-                                            <div class="cover-letter">
-                                                <p>Greg is a product strategy consultant and trainer with nearly 20 years of experience shipping digital enterprise  products at IBM, Microsoft, and products and enterprise scale. <a href="#">View More</a></p>
+                                            <div class="user-title">
+                                                <div class="d-flex">
+                                                    <h3>Greg Prickril <span class="user-mode"><i class="fas fa-check-circle"></i></span></h3>
+                                                    <h4><i class="fas fa-star"></i> Rising talent</h4>
+                                                </div>
+                                                <div class="freelancer-skills">
+                                                    MEAN Stack (Angular | Vue.js | Laravel | Node) 
+                                                </div>
+                                                <h5>United State</h5>
                                             </div>
                                         </div>
-                                        <div class="user-rate d-flex flex-row flex-lg-column justify-content-start justify-content-lg-between">
-                                            <div class="user-rate-title">
-                                                <h3>$10-$30 USD</h3>
-                                                <h4>Fixed</h4>
+                                        <div class="user-rate d-flex flex-md-column d-lg-block">
+                                            <div class="user-rate-btn">
+                                                <a href="#" class="boxed-btn">Hire me</a>
+                                                <a href="#" class="boxed-btn contact-btn">Contact</a>
                                             </div>
-                                            <div class="job-posting-time">
-                                                <p>Posted 5 minutes ago</p>
+                                            <div class="user-rate-title">
+                                                <h3>$10/hr</h3>
+                                                <h4>Hourly rate</h4>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="user-skills">
-                                        <span>Adobe Illustrator</span>
-                                        <span>Adobe Photoshop</span>
-                                        <span>Logo Design</span>
+                                        <span>Augmented Reality (AR)</span>
+                                        <span>Virtual Reality (VR)</span>
+                                        <span>Unity3D</span>
                                     </div>
                                 </div>
                                 <div class="proposal-footer d-flex flex-wrap flex-lg-nowrap">
                                     <div class="single-footer one position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-clock"></i></span> Apply Before
-                                        <br/> <span class="highlighted-text">1 days 2hours</span>
+                                        <span class="absolute-icon"><i class="fas fa-dollar-sign"></i></span> Total Earning<br/> <span class="earnings">$25,000 USD</span>
                                     </div>
                                     <div class="single-footer hours position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-dollar-sign"></i></span> Payment method 
-                                        <br/> <span class="highlighted-text">Verified</span>
+                                        <span class="absolute-icon"><i class="fas fa-clock"></i></span> <div class="success-rate">
+                                            <p>Success Rate</p>
+                                            <div class="position-relative">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="progress-number">78%</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="single-footer reviews position-relative">
-                                        <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 0 Reviews</div>
+                                        <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 55 Reviews</div>
                                         <div class="stars">
                                             <span><i class="fas fa-star"></i></span>
                                             <span><i class="fas fa-star"></i></span>
@@ -558,10 +662,97 @@
                                         </div>
                                     </div>
                                     <div class="single-footer country position-relative">
-                                        <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Country <strong>United State</strong>
+                                        <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Certificates 
+                                        <div class="certificates">
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                        </div>
                                     </div>
                                     <div class="single-footer five d-flex align-items-center justify-content-start justify-content-lg-end">
-                                        Saved 
+                                        <span class="heart-icon position-relative">
+                                            <span class="blank"><i class="far fa-heart"></i></span>
+                                            <span class="fill"><i class="fas fa-heart"></i></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- single-proposal-item ends -->
+                            <!-- single-proposal-item starts -->
+                            <div class="single-proposal-item browse-freelancer-item position-relative">
+                                <div class="proposal-content">
+                                    <div class="d-flex flex-wrap flex-lg-nowrap">
+                                        <div class="user-thumb">
+                                            <span>
+                                                <img src="img/user-2.svg" alt="">
+                                                <div class="online-status offline"></div>
+                                            </span>
+                                        </div>
+                                        <div class="user-detail">
+                                            <div class="user-title">
+                                                <div class="d-flex">
+                                                    <h3>Greg Prickril <span class="user-mode"></span></h3>
+                                                    <!-- <h4><i class="fas fa-star"></i> Rising talent</h4> -->
+                                                </div>
+                                                <div class="freelancer-skills">
+                                                    MEAN Stack (Angular | Vue.js | Laravel | Node) 
+                                                </div>
+                                                <h5>United State</h5>
+                                            </div>
+                                        </div>
+                                        <div class="user-rate d-flex flex-md-column d-lg-block">
+                                            <div class="user-rate-btn">
+                                                <a href="#" class="boxed-btn">Hire me</a>
+                                                <a href="#" class="boxed-btn contact-btn">Contact</a>
+                                            </div>
+                                            <div class="user-rate-title">
+                                                <h3>$10/hr</h3>
+                                                <h4>Hourly rate</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="user-skills">
+                                        <span>Augmented Reality (AR)</span>
+                                        <span>Virtual Reality (VR)</span>
+                                        <span>Unity3D</span>
+                                    </div>
+                                </div>
+                                <div class="proposal-footer d-flex flex-wrap flex-lg-nowrap">
+                                    <div class="single-footer one position-relative">
+                                        <span class="absolute-icon"><i class="fas fa-dollar-sign"></i></span> Total Earning<br/> <span class="earnings">$25,000 USD</span>
+                                    </div>
+                                    <div class="single-footer hours position-relative">
+                                        <span class="absolute-icon"><i class="fas fa-clock"></i></span> <div class="success-rate">
+                                            <p>Success Rate</p>
+                                            <div class="position-relative">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="progress-number">78%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="single-footer reviews position-relative">
+                                        <div><span class="absolute-icon"><i class="fas fa-star"></i></span> 55 Reviews</div>
+                                        <div class="stars">
+                                            <span><i class="fas fa-star"></i></span>
+                                            <span><i class="fas fa-star"></i></span>
+                                            <span><i class="fas fa-star"></i></span>
+                                            <span><i class="fas fa-star"></i></span>
+                                            <span><i class="fas fa-star"></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-footer country position-relative">
+                                        <span class="absolute-icon"><i class="fas fa-map-marker-alt"></i></span> Certificates 
+                                        <div class="certificates">
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                            <span><img src="img/certificate-1.svg" alt=""></span>
+                                        </div>
+                                    </div>
+                                    <div class="single-footer five d-flex align-items-center justify-content-start justify-content-lg-end">
                                         <span class="heart-icon position-relative">
                                             <span class="blank"><i class="far fa-heart"></i></span>
                                             <span class="fill"><i class="fas fa-heart"></i></span>

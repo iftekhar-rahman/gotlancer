@@ -104,13 +104,15 @@
                 left: auto;
                 right: -320px;
                 padding-left: 20px;
+                padding-right: 20px;
                 overflow-y: scroll;
                 &.active{
                     right: 0;
                 }
                 .visible-on-small-device {
-                    padding: 5px 12px 5px 15px;
+                    padding: 5px 0px 5px 15px;
                     border-bottom: 0;
+                    margin-right: -10px;
                 }
                 
             }

@@ -227,11 +227,12 @@
                 }
                 .job-posting-time {
                     font-size: 16px;
+                    margin-bottom: -6px;
                     @include mx-desktops{
                         font-size: 14px;
                     }
                     @include all-below-med{
-                        margin: 8px 0 0 80px;
+                        margin: 6px 0 0 80px;
                         font-size: 14px;
                     }
                     @include all-below-mobile-lg{

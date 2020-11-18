@@ -303,40 +303,6 @@
                     color: #fff;
                 }
             }
-            .success-rate {
-                margin-top: 12px;
-                font-size: 12px;
-                text-transform: capitalize;
-                @include all-below-med{
-                    width: 225px;
-                    margin-top: 0px;
-                    margin-bottom: 16px;
-                }
-                p {
-                    margin: 0 0 5px;
-                }
-                .progress {
-                    height: 5px;
-                    background: #EBEDF3;
-                    border-radius: 50px;
-                    width: 145px;
-                    @include mx-desktops{
-                        width: 125px;
-                    }
-                    @include all-below-med{
-                        width: 190px;
-                    }
-                    .progress-bar {
-                        @extend %primary-bg-color;
-                        border-radius: 50px;
-                    }
-                }
-                .progress-number {
-                    position: absolute;
-                    right: 0;
-                    top: -8px;
-                }
-            }
         }
     }
     &.sopnsored {
@@ -345,6 +311,40 @@
             opacity: 1;
             visibility: visible;
         }
+    }
+}
+.success-rate {
+    margin-top: 12px;
+    font-size: 12px;
+    text-transform: capitalize;
+    @include all-below-med{
+        width: 225px;
+        margin-top: 0px;
+        margin-bottom: 16px;
+    }
+    p {
+        margin: 0 0 5px;
+    }
+    .progress {
+        height: 5px;
+        background: #EBEDF3;
+        border-radius: 50px;
+        width: 145px;
+        @include mx-desktops{
+            width: 125px;
+        }
+        @include all-below-med{
+            width: 190px;
+        }
+        .progress-bar {
+            @extend %primary-bg-color;
+            border-radius: 50px;
+        }
+    }
+    .progress-number {
+        position: absolute;
+        right: 0;
+        top: -8px;
     }
 }
 

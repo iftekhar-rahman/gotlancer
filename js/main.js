@@ -1,6 +1,9 @@
 jQuery(document).ready(function($){
 
 
+    // perfectScrollbar
+    $(".nice-select .list").perfectScrollbar();
+
     // JS for search box
     $(function() {
         $("#search-box-trigger").on("click", function(e) {
